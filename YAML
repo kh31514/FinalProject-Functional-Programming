@@ -23,6 +23,6 @@ demo-video-url: ""
 desc: >
   Our project integrates the Spotify API with OCaml to give users personalized 
   music experience. Users can interact with the terminal interface to learn
-  more about a given song, artist, album, genre, or decade. To learn more about
-  all possible commands, type "help." Our end goal is to help users identify new
+  more about a given song, artist, album, genre, or decade. To list all 
+  possible commands, type "help." Our end goal is to help users identify new
   songs, artists, or albums that match their individualized taste in music.
