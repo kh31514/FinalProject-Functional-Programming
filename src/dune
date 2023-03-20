@@ -1,2 +1,3 @@
-(library
- (name spotify))
+(executable
+ (name spotify)
+ (libraries spotify_web_api))
