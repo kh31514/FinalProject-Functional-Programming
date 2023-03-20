@@ -14,18 +14,15 @@ pm:
 # Set to false if you don't want your gallery entry to be public.
 publish: true
 # Pithy title
-title: "The Complete Caml Calculator (CCC)"
+title: "SpotiCaml"
 # OK if this is a Cornell Github link, but public gallery viewers won't be able to see it.
-git-repo: "https://github.com/cs3110/textbook"
+git-repo: "https://github.coecis.cornell.edu/kah294/cs3110-final-project"
 # If you have no demo screencast, replace the url string with an empty string ""
-demo-video-url: "https://www.youtube.com/watch?v=eSBybJGZoCU"
+demo-video-url: ""
 # Write a short, attention-grabbing description of your project.
 desc: >
-  Our project is an interactive calculator. It supports standard mathematical
-  operations like addition, multiplication, negation, and division on both
-  integers and floating-point numbers. The interface is completely
-  programmable--new functions can easily be defined and assigned to new "keys"
-  in the visual interface.
-
-  Standard visual I/O is supported, but the calculator can also emit sound. By
-  pressing down a special key, it can play a little melody.
+  Our project integrates the Spotify API with OCaml to give users personalized 
+  music experience. Users can interact with the terminal interface to learn
+  more about a given song, artist, album, genre, or decade. To learn more about
+  all possible commands, type "help." Our end goal is to help users identify new
+  songs, artists, or albums that match their individualized taste in music.
