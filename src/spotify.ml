@@ -1,1 +1,2 @@
-true
+
+let parse str = true

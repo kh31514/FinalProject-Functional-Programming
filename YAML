@@ -1,14 +1,16 @@
 ---
 # Members of your group.
 group:
-  - name: Justin Hsu
-    netid: jah659
-  - name: Dexter Kozen
-    netid: dck10
+  - name: Henry Koontz
+    netid: htk24
+  - name: Katie Huntley
+    netid: kah294
+  - name: Cody Capalongo
+    netid: cjc352
 # Your PM.
 pm:
-  name: Florian Schneider
-  netid: fs47
+  name: Margia Rounok
+  netid: mr879
 # Set to false if you don't want your gallery entry to be public.
 publish: true
 # Pithy title
