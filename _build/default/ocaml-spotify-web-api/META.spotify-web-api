@@ -1,0 +1,6 @@
+description = ""
+requires = "atdgen biniou cohttp-lwt-unix uri yojson"
+archive(byte) = "spotify_web_api.cma"
+archive(native) = "spotify_web_api.cmxa"
+plugin(byte) = "spotify_web_api.cma"
+plugin(native) = "spotify_web_api.cmxs"
