@@ -7,22 +7,22 @@ let scope = "&scope=user-read-private"
 
 let request_authorization = const ^ "?client_id" ^ client_id ^ "&response_type=code&redirt_uri=" ^ redirect_URl ^ "&show_dialog=true" ^ scope;
 
-let token = "";
+let token = ""; in ()
 
-TODO: figure out import issues (check dune file?)
-open spotify-web-api
+(* TODO: figure out import issues (check dune file?) *)
+(* open spotify-web-api *)
 
-TODO: implement this
+(* TODO: implement this *)
 (** [handle_song song] will print information about [song] (ex. artist, album, duration, genre) *)
 let handle_song song =
   let mode = `track in ()
 
-TODO: implement this
+(* TODO: implement this *)
 (** [handle_artist artist] will print information about [artist] (ex. top 5 songs/albums, age, number of songs produced, popularity) *)
-let handle_artist artist = 
+let handle_artist artist =
   let mode = `artist in ()
 
-  TODO: implement this
+(* TODO: implement this *)
 (** [handle_album album] will print information about [album] (ex. songs in album, artist, duration, genre) *)
 let handle_album album = 
   let mode = `album in ()

@@ -1,0 +1,226 @@
+(lang dune 3.7)
+(name spotify-web-api)
+(sections (lib .) (libexec .) (doc ../../doc/spotify-web-api))
+(files
+ (lib
+  (META
+   album_j.cmi
+   album_j.cmt
+   album_j.cmti
+   album_j.cmx
+   album_j.ml
+   album_j.mli
+   album_t.cmi
+   album_t.cmt
+   album_t.cmti
+   album_t.cmx
+   album_t.ml
+   album_t.mli
+   artist_j.cmi
+   artist_j.cmt
+   artist_j.cmti
+   artist_j.cmx
+   artist_j.ml
+   artist_j.mli
+   artist_t.cmi
+   artist_t.cmt
+   artist_t.cmti
+   artist_t.cmx
+   artist_t.ml
+   artist_t.mli
+   dune-package
+   external_ids_j.cmi
+   external_ids_j.cmt
+   external_ids_j.cmti
+   external_ids_j.cmx
+   external_ids_j.ml
+   external_ids_j.mli
+   external_ids_t.cmi
+   external_ids_t.cmt
+   external_ids_t.cmti
+   external_ids_t.cmx
+   external_ids_t.ml
+   external_ids_t.mli
+   external_urls_j.cmi
+   external_urls_j.cmt
+   external_urls_j.cmti
+   external_urls_j.cmx
+   external_urls_j.ml
+   external_urls_j.mli
+   external_urls_t.cmi
+   external_urls_t.cmt
+   external_urls_t.cmti
+   external_urls_t.cmx
+   external_urls_t.ml
+   external_urls_t.mli
+   followers_j.cmi
+   followers_j.cmt
+   followers_j.cmti
+   followers_j.cmx
+   followers_j.ml
+   followers_j.mli
+   followers_t.cmi
+   followers_t.cmt
+   followers_t.cmti
+   followers_t.cmx
+   followers_t.ml
+   followers_t.mli
+   image_j.cmi
+   image_j.cmt
+   image_j.cmti
+   image_j.cmx
+   image_j.ml
+   image_j.mli
+   image_t.cmi
+   image_t.cmt
+   image_t.cmti
+   image_t.cmx
+   image_t.ml
+   image_t.mli
+   opam
+   paging_j.cmi
+   paging_j.cmt
+   paging_j.cmti
+   paging_j.cmx
+   paging_j.ml
+   paging_j.mli
+   paging_t.cmi
+   paging_t.cmt
+   paging_t.cmti
+   paging_t.cmx
+   paging_t.ml
+   paging_t.mli
+   spotify_web_api.a
+   spotify_web_api.cma
+   spotify_web_api.cmi
+   spotify_web_api.cmt
+   spotify_web_api.cmti
+   spotify_web_api.cmx
+   spotify_web_api.cmxa
+   spotify_web_api.ml
+   spotify_web_api.mli
+   track_j.cmi
+   track_j.cmt
+   track_j.cmti
+   track_j.cmx
+   track_j.ml
+   track_j.mli
+   track_t.cmi
+   track_t.cmt
+   track_t.cmti
+   track_t.cmx
+   track_t.ml
+   track_t.mli))
+ (libexec (spotify_web_api.cmxs))
+ (doc (LICENSE README.md)))
+(library
+ (name spotify-web-api)
+ (kind normal)
+ (archives (byte spotify_web_api.cma) (native spotify_web_api.cmxa))
+ (plugins (byte spotify_web_api.cma) (native spotify_web_api.cmxs))
+ (native_archives spotify_web_api.a)
+ (requires atdgen biniou yojson uri cohttp-lwt-unix)
+ (modes byte native)
+ (modules
+  (unwrapped
+   (module
+    (obj_name album_j)
+    (visibility public)
+    (source (path Album_j) (intf (path album_j.mli)) (impl (path album_j.ml))))
+   (module
+    (obj_name album_t)
+    (visibility public)
+    (source (path Album_t) (intf (path album_t.mli)) (impl (path album_t.ml))))
+   (module
+    (obj_name artist_j)
+    (visibility public)
+    (source
+     (path Artist_j)
+     (intf (path artist_j.mli))
+     (impl (path artist_j.ml))))
+   (module
+    (obj_name artist_t)
+    (visibility public)
+    (source
+     (path Artist_t)
+     (intf (path artist_t.mli))
+     (impl (path artist_t.ml))))
+   (module
+    (obj_name external_ids_j)
+    (visibility public)
+    (source
+     (path External_ids_j)
+     (intf (path external_ids_j.mli))
+     (impl (path external_ids_j.ml))))
+   (module
+    (obj_name external_ids_t)
+    (visibility public)
+    (source
+     (path External_ids_t)
+     (intf (path external_ids_t.mli))
+     (impl (path external_ids_t.ml))))
+   (module
+    (obj_name external_urls_j)
+    (visibility public)
+    (source
+     (path External_urls_j)
+     (intf (path external_urls_j.mli))
+     (impl (path external_urls_j.ml))))
+   (module
+    (obj_name external_urls_t)
+    (visibility public)
+    (source
+     (path External_urls_t)
+     (intf (path external_urls_t.mli))
+     (impl (path external_urls_t.ml))))
+   (module
+    (obj_name followers_j)
+    (visibility public)
+    (source
+     (path Followers_j)
+     (intf (path followers_j.mli))
+     (impl (path followers_j.ml))))
+   (module
+    (obj_name followers_t)
+    (visibility public)
+    (source
+     (path Followers_t)
+     (intf (path followers_t.mli))
+     (impl (path followers_t.ml))))
+   (module
+    (obj_name image_j)
+    (visibility public)
+    (source (path Image_j) (intf (path image_j.mli)) (impl (path image_j.ml))))
+   (module
+    (obj_name image_t)
+    (visibility public)
+    (source (path Image_t) (intf (path image_t.mli)) (impl (path image_t.ml))))
+   (module
+    (obj_name paging_j)
+    (visibility public)
+    (source
+     (path Paging_j)
+     (intf (path paging_j.mli))
+     (impl (path paging_j.ml))))
+   (module
+    (obj_name paging_t)
+    (visibility public)
+    (source
+     (path Paging_t)
+     (intf (path paging_t.mli))
+     (impl (path paging_t.ml))))
+   (module
+    (obj_name spotify_web_api)
+    (visibility public)
+    (source
+     (path Spotify_web_api)
+     (intf (path spotify_web_api.mli))
+     (impl (path spotify_web_api.ml))))
+   (module
+    (obj_name track_j)
+    (visibility public)
+    (source (path Track_j) (intf (path track_j.mli)) (impl (path track_j.ml))))
+   (module
+    (obj_name track_t)
+    (visibility public)
+    (source (path Track_t) (intf (path track_t.mli)) (impl (path track_t.ml)))))))
