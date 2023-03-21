@@ -1,6 +1,7 @@
 Install instructions:
 
-After unzipping the source code, change to the source code's directory in command line, and run "make build".
+After unzipping the source code, change directories to "ocaml-spotify-web-api", and run "make build".
+Return to the home directory and run "make build" again.
 
 If the terminal prompts an error message, you likely need to install packages. Try running the following commands:
 * opam install lwt
@@ -8,6 +9,8 @@ If the terminal prompts an error message, you likely need to install packages. T
 * opam install biniou
 * opam install atdgen
 * opam install uri
+* opam install oUnit
+* opam install cohttp-lwt-unix
 
 Now, you should be able to run "make listen" to begin your musical journey. Further instructions will be provided in the terminal. 
 
