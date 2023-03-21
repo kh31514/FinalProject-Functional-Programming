@@ -1,1 +1,0 @@
-type external_urls = (string * string) list <json repr="object">

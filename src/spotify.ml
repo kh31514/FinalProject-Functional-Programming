@@ -9,23 +9,18 @@ let request_authorization = const ^ "?client_id" ^ client_id ^ "&response_type=c
 
 let token = ""; in ()
 
-(* TODO: figure out import issues (check dune file?) *)
-(* open spotify-web-api *)
-
 (* TODO: implement this *)
 (** [handle_song song] will print information about [song] (ex. artist, album, duration, genre) *)
-let handle_song song =
-  let mode = `track in ()
+let handle_song song = let _ = Spotify_web_api.Search.search_tracks song in () 
+
 
 (* TODO: implement this *)
 (** [handle_artist artist] will print information about [artist] (ex. top 5 songs/albums, age, number of songs produced, popularity) *)
-let handle_artist artist =
-  let mode = `artist in ()
+let handle_artist artist = let _ = Spotify_web_api.Search.search_artists artist in ()
 
 (* TODO: implement this *)
 (** [handle_album album] will print information about [album] (ex. songs in album, artist, duration, genre) *)
-let handle_album album = 
-  let mode = `album in ()
+let handle_album album = let _ = Spotify_web_api.Search.search_albums album in ()
 
 (** [parse text] determines whether a user inputs a song, artist, or album and calls the approprate, associaetd function.
     The function will be re-called if given extraneous input *)

@@ -1,1 +1,0 @@
-../../../../default/ocaml-spotify-web-api/lib/image_j.mli
