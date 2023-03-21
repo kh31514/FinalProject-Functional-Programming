@@ -1,7 +1,7 @@
-album_t
-artist_t
-external_ids_t
-external_urls_t
-followers_t
-image_t
-paging_t
+Album_t
+Artist_t
+External_ids_t
+External_urls_t
+Followers_t
+Image_t
+Paging_t

@@ -1,4 +1,4 @@
-(lang dune 3.7)
+(lang dune 3.6)
 (name spotify-web-api)
 (sections (lib .) (libexec .) (doc ../../doc/spotify-web-api))
 (files
@@ -123,104 +123,48 @@
  (modes byte native)
  (modules
   (unwrapped
-   (module
-    (obj_name album_j)
-    (visibility public)
-    (source (path Album_j) (intf (path album_j.mli)) (impl (path album_j.ml))))
-   (module
-    (obj_name album_t)
-    (visibility public)
-    (source (path Album_t) (intf (path album_t.mli)) (impl (path album_t.ml))))
-   (module
-    (obj_name artist_j)
-    (visibility public)
-    (source
-     (path Artist_j)
-     (intf (path artist_j.mli))
-     (impl (path artist_j.ml))))
-   (module
-    (obj_name artist_t)
-    (visibility public)
-    (source
-     (path Artist_t)
-     (intf (path artist_t.mli))
-     (impl (path artist_t.ml))))
-   (module
+   ((name Album_j) (obj_name album_j) (visibility public) (impl) (intf))
+   ((name Album_t) (obj_name album_t) (visibility public) (impl) (intf))
+   ((name Artist_j) (obj_name artist_j) (visibility public) (impl) (intf))
+   ((name Artist_t) (obj_name artist_t) (visibility public) (impl) (intf))
+   ((name External_ids_j)
     (obj_name external_ids_j)
     (visibility public)
-    (source
-     (path External_ids_j)
-     (intf (path external_ids_j.mli))
-     (impl (path external_ids_j.ml))))
-   (module
+    (impl)
+    (intf))
+   ((name External_ids_t)
     (obj_name external_ids_t)
     (visibility public)
-    (source
-     (path External_ids_t)
-     (intf (path external_ids_t.mli))
-     (impl (path external_ids_t.ml))))
-   (module
+    (impl)
+    (intf))
+   ((name External_urls_j)
     (obj_name external_urls_j)
     (visibility public)
-    (source
-     (path External_urls_j)
-     (intf (path external_urls_j.mli))
-     (impl (path external_urls_j.ml))))
-   (module
+    (impl)
+    (intf))
+   ((name External_urls_t)
     (obj_name external_urls_t)
     (visibility public)
-    (source
-     (path External_urls_t)
-     (intf (path external_urls_t.mli))
-     (impl (path external_urls_t.ml))))
-   (module
+    (impl)
+    (intf))
+   ((name Followers_j)
     (obj_name followers_j)
     (visibility public)
-    (source
-     (path Followers_j)
-     (intf (path followers_j.mli))
-     (impl (path followers_j.ml))))
-   (module
+    (impl)
+    (intf))
+   ((name Followers_t)
     (obj_name followers_t)
     (visibility public)
-    (source
-     (path Followers_t)
-     (intf (path followers_t.mli))
-     (impl (path followers_t.ml))))
-   (module
-    (obj_name image_j)
-    (visibility public)
-    (source (path Image_j) (intf (path image_j.mli)) (impl (path image_j.ml))))
-   (module
-    (obj_name image_t)
-    (visibility public)
-    (source (path Image_t) (intf (path image_t.mli)) (impl (path image_t.ml))))
-   (module
-    (obj_name paging_j)
-    (visibility public)
-    (source
-     (path Paging_j)
-     (intf (path paging_j.mli))
-     (impl (path paging_j.ml))))
-   (module
-    (obj_name paging_t)
-    (visibility public)
-    (source
-     (path Paging_t)
-     (intf (path paging_t.mli))
-     (impl (path paging_t.ml))))
-   (module
+    (impl)
+    (intf))
+   ((name Image_j) (obj_name image_j) (visibility public) (impl) (intf))
+   ((name Image_t) (obj_name image_t) (visibility public) (impl) (intf))
+   ((name Paging_j) (obj_name paging_j) (visibility public) (impl) (intf))
+   ((name Paging_t) (obj_name paging_t) (visibility public) (impl) (intf))
+   ((name Spotify_web_api)
     (obj_name spotify_web_api)
     (visibility public)
-    (source
-     (path Spotify_web_api)
-     (intf (path spotify_web_api.mli))
-     (impl (path spotify_web_api.ml))))
-   (module
-    (obj_name track_j)
-    (visibility public)
-    (source (path Track_j) (intf (path track_j.mli)) (impl (path track_j.ml))))
-   (module
-    (obj_name track_t)
-    (visibility public)
-    (source (path Track_t) (intf (path track_t.mli)) (impl (path track_t.ml)))))))
+    (impl)
+    (intf))
+   ((name Track_j) (obj_name track_j) (visibility public) (impl) (intf))
+   ((name Track_t) (obj_name track_t) (visibility public) (impl) (intf)))))
