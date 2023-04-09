@@ -1,7 +1,8 @@
+# source: https://www.youtube.com/watch?v=WAmEZBEeNmg&ab_channel=Linode
 from dotenv import load_dotenv
 import os
 import base64
-from requests import post
+from requests import post, get
 import json
 
 load_dotenv()
@@ -25,7 +26,26 @@ def get_token():
   token = json_result["access_token"]
   return token # string type
 
-def main():
+def get_auth_header(token):
+  return {"Authorization": "Bearer " + token}
+
+def search_for_artist(token, artist_name):
+  url = "https://api.spotify.com/v1/search"
+  headers = get_auth_header(token)
+  query = f"?q={artist_name}&type=artist&limit=1"
+
+  query_url = url + query
+  result = get(query_url, headers=headers)
+  json_result = json.loads(result.content)["artists"]["items"]
+  if len(json_result) == 0:
+    return None
+  return json_result[0]
+
+def handle_artist():
+  with open('artist.txt') as f:
+    artist = f.readlines()
   token = get_token()
-  with open('token.txt', 'w') as f:
-    f.write(token)
+  result = search_for_artist(token, artist)
+  with open("artist.json", "w") as f:
+    json.dump(result, f)
+  return

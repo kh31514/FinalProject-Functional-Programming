@@ -1,10 +1,10 @@
 
+(* source: https://github.com/thierry-martinez/pyml *)
 Py.initialize ()
 
-let _ = Py.Run.eval ~start:Py.File "
-from authorization import *
-main()"
-
+(* How to read a text file
+  May or may not need this 
+   source: https://itecnote.com/tecnote/how-to-read-in-lines-from-a-text-file-in-ocaml/ *)
 let read_file filename = 
   let lines = ref [] in
   let chan = open_in filename in
@@ -16,16 +16,24 @@ let read_file filename =
     close_in chan;
     List.rev !lines ;;
 
-let token = read_file "token.txt" |> List.hd
-
 (* TODO: implement this *)
 (** [handle_song song] will print information about [song] (ex. artist, album, duration, genre) *)
 let handle_song song = ()
 
-
 (* TODO: implement this *)
 (** [handle_artist artist] will print information about [artist] (ex. top 5 songs/albums, age, number of songs produced, popularity) *)
-let handle_artist artist = ()
+let handle_artist artist =
+  (* source: https://ocaml.org/docs/file-manipulation#example *)
+  let oc = open_out "artist.txt" in
+  (* create or truncate file, return channel *)
+  Printf.fprintf oc "%s\n" artist;
+  (* write something *)
+  close_out oc;
+
+(* DON'T indent this, will throw a weird error *)
+let _ = Py.Run.eval ~start:Py.File ("
+from authorization import *
+handle_artist()") in ()
 
 (* TODO: implement this *)
 (** [handle_album album] will print information about [album] (ex. songs in album, artist, duration, genre) *)
