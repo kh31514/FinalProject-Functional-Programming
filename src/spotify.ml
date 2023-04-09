@@ -1,26 +1,35 @@
-let redirect_URl = "git@github.coecis.cornell.edu:kah294/cs3110-final-project.git"
-let client_id = "fac6c1e9d41148518b698b35d29fb9dd"
-let client_secret = "66510a496dbe43859f5de34ae6a9be99"
 
-let const = "https://accounts.spotity.com/authorize"
-let scope = "&scope=user-read-private"
+Py.initialize ()
 
-let request_authorization = const ^ "?client_id" ^ client_id ^ "&response_type=code&redirt_uri=" ^ redirect_URl ^ "&show_dialog=true" ^ scope;
+let _ = Py.Run.eval ~start:Py.File "
+from authorization import *
+main()"
 
-let token = ""; in ()
+let read_file filename = 
+  let lines = ref [] in
+  let chan = open_in filename in
+  try
+    while true; do
+      lines := input_line chan :: !lines
+    done; !lines
+  with End_of_file ->
+    close_in chan;
+    List.rev !lines ;;
+
+let token = read_file "token.txt" |> List.hd
 
 (* TODO: implement this *)
 (** [handle_song song] will print information about [song] (ex. artist, album, duration, genre) *)
-let handle_song song = let _ = Spotify_web_api.Search.search_tracks song in () 
+let handle_song song = ()
 
 
 (* TODO: implement this *)
 (** [handle_artist artist] will print information about [artist] (ex. top 5 songs/albums, age, number of songs produced, popularity) *)
-let handle_artist artist = let _ = Spotify_web_api.Search.search_artists artist in ()
+let handle_artist artist = ()
 
 (* TODO: implement this *)
 (** [handle_album album] will print information about [album] (ex. songs in album, artist, duration, genre) *)
-let handle_album album = let _ = Spotify_web_api.Search.search_albums album in ()
+let handle_album album = ()
 
 (** [parse text] determines whether a user inputs a song, artist, or album and calls the approprate, associaetd function.
     The function will be re-called if given extraneous input *)
