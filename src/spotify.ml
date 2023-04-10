@@ -1,30 +1,18 @@
 type image = {
-  (* height : int; *)
-  height : string;
+  height : int;
   url : string;
-  (* width : int; *)
-  width : string;
+  width : int;
 }
-
-type spotify_record = {
-  spotify : string;
-}
-
-(* type followers_record = {
-  href : ;
-  total : int;
-} *)
 
 type artist = {
-  (* external_url : spotify_record;  *)
-  (* followers : string; *)
+  spotify_link : string; 
+  follower_count : int;
   genres : string list;
   href : string;
   id : string;
-  (* images : image list; *)
+  images : image list;
   name : string;
-  (* popularity : int; *)
-  (* popularity : string; *)
+  popularity : int;
   category : string;
   uri : string;
 }
@@ -50,29 +38,21 @@ open Yojson.Basic.Util
 let from_json json =
   let image_of_json json =
     {
-      (* height = json |> member "height" |> to_string |> int_of_string; *)
-      height = json |> member "height" |> to_string;
+      height = json |> member "height" |> to_int;
       url = json |> member "url" |> to_string;
-      (* width = json |> member "width" |> to_string |> int_of_string; *)
-      width = json |> member "width" |> to_string;
+      width = json |> member "width" |> to_int;
     }
   in
-  (* let spotify_record_of_json = 
-    {
-      spotify = json |> member "spotify" |> to_string;
-    }
-  in *)
   let artist_of_json json =
     {
-      (* external_url = {}
-      followers =  *)
+      spotify_link = json |> member "external_urls" |> member "spotify" |> to_string;
+      follower_count = json |> member "followers" |> member "total" |> to_int;
       genres = json |> member "genres" |> to_list |> List.map to_string;
       href = json |> member "href" |> to_string;
       id = json |> member "id" |> to_string;
-      (* images = json |> member "images" |> to_list |> List.map image_of_json; *)
+      images = json |> member "images" |> to_list |> List.map image_of_json;
       name = json |> member "name" |> to_string;
-      (* popularity = json |> member "popularity" |> to_string |> int_of_string; *)
-      (* popularity = json |> member "popularity" |> to_string; *)
+      popularity = json |> member "popularity" |> to_int;
       category = json |> member "type" |> to_string;
       uri = json |> member "uri" |> to_string;
     }
@@ -82,9 +62,7 @@ let get_name =
 let json = Yojson.Basic.from_file "artist.json" in 
   let artist = from_json json in 
   match artist with
-  (* | {genres; href; id; images; name; popularity; category; uri} -> name *)
-  | {genres; href; id; name; category; uri} -> name
-
+  | {spotify_link; follower_count; genres; href; id; images; name; popularity; category; uri} -> name
 
 (* TODO: implement this *)
 (** [handle_song song] will print information about [song] (ex. artist, album, duration, genre) *)
