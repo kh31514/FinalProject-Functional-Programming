@@ -103,8 +103,7 @@ let handle_artist artist = (
 (* DON'T indent this, will throw a weird error *)
 let _ = Py.Run.eval ~start:Py.File ("
 from authorization import *
-handle_artist()
-print('uploaded new json')") in print_endline get_name; ())
+handle_artist()") in let _ = print_endline get_name in ())
 
 (* TODO: implement this *)
 (** [handle_album album] will print information about [album] (ex. songs in album, artist, duration, genre) *)

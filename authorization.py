@@ -44,7 +44,9 @@ def search_for_artist(token, artist_name):
 
 def handle_artist():
   with open('artist.txt') as f:
-    artist = f.readlines()
+    artist = f.readlines() # returns a list
+  # grabs the firts (and only) string in the list and removes the trailing newline character
+  artist = artist[0].strip()
   token = get_token()
   result = search_for_artist(token, artist)
   with open("artist.json", "w") as f:

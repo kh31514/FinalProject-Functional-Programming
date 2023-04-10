@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /home/kh31514/cs3110/final-project
 # Auto-detected concurrency: 8
-$ /home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_0a496c_output
+$ /home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_60a824_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -115,9 +115,3 @@ $ /home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_0a496c_ou
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/kh31514/.opam/cs3110-2023sp/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I src/.spotify.eobjs/byte -I src/.spotify.eobjs/native -I /home/kh31514/.opam/cs3110-2023sp/lib/pyml -I /home/kh31514/.opam/cs3110-2023sp/lib/seq -I /home/kh31514/.opam/cs3110-2023sp/lib/stdcompat -I /home/kh31514/.opam/cs3110-2023sp/lib/yojson -intf-suffix .ml -no-alias-deps -opaque -o src/.spotify.eobjs/native/dune__exe__Spotify.cmx -c -impl src/spotify.ml)
-> File "src/spotify.ml", line 51, characters 6-19:
-> 51 |   let image_of_json json =
->            ^^^^^^^^^^^^^
-> Warning 26 [unused-var]: unused variable image_of_json.
-$ (cd _build/default && /home/kh31514/.opam/cs3110-2023sp/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -o src/spotify.exe /home/kh31514/.opam/cs3110-2023sp/lib/ocaml/unix.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/ocaml /home/kh31514/.opam/cs3110-2023sp/lib/ocaml/bigarray.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/ocaml /home/kh31514/.opam/cs3110-2023sp/lib/stdcompat/stdcompat.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/stdcompat /home/kh31514/.opam/cs3110-2023sp/lib/pyml/pyml.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/pyml /home/kh31514/.opam/cs3110-2023sp/lib/yojson/yojson.cmxa src/.spotify.eobjs/native/dune__exe__Spotify.cmx)
