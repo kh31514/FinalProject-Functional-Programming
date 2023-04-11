@@ -18,7 +18,7 @@ test:
 # 	OCAMLRUNPARAM=b dune exec bin/main.exe
 
 listen:
-	OCAMLRUNPARAM=b dune exec src/spotify.exe
+	OCAMLRUNPARAM=b dune exec bin/main.exe
 
 # check:
 # 	@bash check.sh

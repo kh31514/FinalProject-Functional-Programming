@@ -1,0 +1,61 @@
+(lang dune 3.7)
+(name API)
+(sections (lib .) (libexec .) (doc ../../doc/API))
+(files
+ (lib
+  (META
+   album.ml
+   api.a
+   api.cma
+   api.cmi
+   api.cmt
+   api.cmx
+   api.cmxa
+   api.ml
+   api__Album.cmi
+   api__Album.cmt
+   api__Album.cmx
+   api__Artist.cmi
+   api__Artist.cmt
+   api__Artist.cmx
+   api__Track.cmi
+   api__Track.cmt
+   api__Track.cmx
+   artist.ml
+   dune-package
+   opam
+   track.ml))
+ (libexec (api.cmxs))
+ (doc (README.md)))
+(library
+ (name API)
+ (kind normal)
+ (archives (byte api.cma) (native api.cmxa))
+ (plugins (byte api.cma) (native api.cmxs))
+ (native_archives api.a)
+ (requires yojson)
+ (main_module_name Api)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name api)
+     (visibility public)
+     (kind alias)
+     (source (path Api) (impl (path api.ml-gen))))
+    (name Api)
+    (modules
+     (module
+      (obj_name api__Album)
+      (visibility public)
+      (source (path Album) (impl (path album.ml))))
+     (module
+      (obj_name api__Artist)
+      (visibility public)
+      (source (path Artist) (impl (path artist.ml))))
+     (module
+      (obj_name api__Track)
+      (visibility public)
+      (source (path Track) (impl (path track.ml))))))
+   (wrapped true))))

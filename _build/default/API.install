@@ -1,0 +1,30 @@
+lib: [
+  "_build/install/default/lib/API/META"
+  "_build/install/default/lib/API/album.ml"
+  "_build/install/default/lib/API/api.a"
+  "_build/install/default/lib/API/api.cma"
+  "_build/install/default/lib/API/api.cmi"
+  "_build/install/default/lib/API/api.cmt"
+  "_build/install/default/lib/API/api.cmx"
+  "_build/install/default/lib/API/api.cmxa"
+  "_build/install/default/lib/API/api.ml"
+  "_build/install/default/lib/API/api__Album.cmi"
+  "_build/install/default/lib/API/api__Album.cmt"
+  "_build/install/default/lib/API/api__Album.cmx"
+  "_build/install/default/lib/API/api__Artist.cmi"
+  "_build/install/default/lib/API/api__Artist.cmt"
+  "_build/install/default/lib/API/api__Artist.cmx"
+  "_build/install/default/lib/API/api__Track.cmi"
+  "_build/install/default/lib/API/api__Track.cmt"
+  "_build/install/default/lib/API/api__Track.cmx"
+  "_build/install/default/lib/API/artist.ml"
+  "_build/install/default/lib/API/dune-package"
+  "_build/install/default/lib/API/opam"
+  "_build/install/default/lib/API/track.ml"
+]
+libexec: [
+  "_build/install/default/lib/API/api.cmxs"
+]
+doc: [
+  "_build/install/default/doc/API/README.md"
+]

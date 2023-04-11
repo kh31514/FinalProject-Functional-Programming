@@ -1,0 +1,6 @@
+description = ""
+requires = "yojson"
+archive(byte) = "api.cma"
+archive(native) = "api.cmxa"
+plugin(byte) = "api.cma"
+plugin(native) = "api.cmxs"
