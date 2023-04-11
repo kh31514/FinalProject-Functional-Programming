@@ -1,6 +1,12 @@
 (* source: https://github.com/thierry-martinez/pyml *)
 let () = Py.initialize ()
 
+(* source: https://ocaml.org/docs/file-manipulation#example *)
+let upload_input input = 
+  let oc = open_out "data/user_input.txt" in
+  Printf.fprintf oc "%s\n" input;
+  close_out oc; ()
+
 (* TODO: implement this *)
 (** [handle_song song] will print information about [song] (ex. artist, album, duration, genre) *)
 let handle_song song = ()
@@ -8,16 +14,13 @@ let handle_song song = ()
 (* TODO: implement this *)
 (** [handle_artist artist] will print information about [artist] (ex. top 5 songs/albums, age, number of songs produced, popularity) *)
 let handle_artist artist = (
-  (* source: https://ocaml.org/docs/file-manipulation#example *)
-  let oc = open_out "data/artist.txt" in
-  Printf.fprintf oc "%s\n" artist;
-  close_out oc;
-
+  upload_input artist;
 (* DON'T indent this, will throw a weird error *)
-let _ = Py.Run.eval ~start:Py.File ("
+Py.Run.eval ~start:Py.File ("
 from authorization import *
-handle_artist()") 
-in let _ = print_endline Api.Artist.get_artist_name in ())
+handle_artist()"); 
+print_endline (Api.Artist.get_artist_name ());
+)
 
 (* TODO: implement this *)
 (** [handle_album album] will print information about [album] (ex. songs in album, artist, duration, genre) *)

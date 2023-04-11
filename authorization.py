@@ -4,7 +4,6 @@ import os
 import base64
 from requests import post, get
 import json
-import time
 
 load_dotenv()
 
@@ -43,7 +42,7 @@ def search_for_artist(token, artist_name):
   return json_result[0]
 
 def handle_artist():
-  with open('data/artist.txt') as f:
+  with open('data/user_input.txt') as f:
     artist = f.readlines() # returns a list
   # grabs the firts (and only) string in the list and removes the trailing newline character
   artist = artist[0].strip()

@@ -42,7 +42,8 @@ let from_json json =
   in
   artist_of_json json
 
-let get_artist_name = 
+(* The [var] parameter isn't used but without it, get_artist_name immediately evaluates to a value at runtime (cause of the OBO error earlier). Basically the [var] parameter delays the runtime *)
+let get_artist_name var = 
   let json = Yojson.Basic.from_file "data/artist.json" in 
     let artist = from_json json in 
     match artist with
