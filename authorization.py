@@ -51,3 +51,28 @@ def handle_artist():
   with open("data/artist.json", "w") as f:
     json.dump(result, f)
   return
+
+def search_for_album(token, album_name):
+  url = "https://api.spotify.com/v1/search"
+  headers = get_auth_header(token)
+  query = f"?q={album_name}&type=album&limit=1"
+
+  query_url = url + query
+  result = get(query_url, headers=headers)
+  json_result = json.loads(result.content)["albums"]["items"]
+  if len(json_result) == 0:
+    return None
+  return json_result[0]
+
+def handle_album():
+  with open('data/user_input.txt') as f:
+    album = f.readlines() # returns a list
+  # grabs the firts (and only) string in the list and removes the trailing newline character
+  album = album[0].strip()
+  token = get_token()
+  result = search_for_album(token, album)
+  with open("data/album.json", "w") as f:
+    json.dump(result, f)
+  return
+
+handle_album()
