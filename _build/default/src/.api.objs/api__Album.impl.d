@@ -1,1 +1,1 @@
-src/album.ml: Api Artist List Yojson
+src/album.ml: Artist List Yojson
