@@ -1,1 +1,39 @@
-{"external_urls": {"spotify": "https://open.spotify.com/artist/6fC2AcsQtd9h4BWELbbire"}, "followers": {"href": null, "total": 709964}, "genres": ["indie pop", "indie rock", "modern rock", "vancouver indie"], "href": "https://api.spotify.com/v1/artists/6fC2AcsQtd9h4BWELbbire", "id": "6fC2AcsQtd9h4BWELbbire", "images": [{"height": 640, "url": "https://i.scdn.co/image/ab6761610000e5eb66fe5cb49c14d5cadb50ad50", "width": 640}, {"height": 320, "url": "https://i.scdn.co/image/ab6761610000517466fe5cb49c14d5cadb50ad50", "width": 320}, {"height": 160, "url": "https://i.scdn.co/image/ab6761610000f17866fe5cb49c14d5cadb50ad50", "width": 160}], "name": "Peach Pit", "popularity": 65, "type": "artist", "uri": "spotify:artist:6fC2AcsQtd9h4BWELbbire"}
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V"
+  },
+  "followers": {
+    "href": null,
+    "total": 4916972
+  },
+  "genres": [
+    "alternative rock",
+    "garage rock",
+    "modern rock",
+    "permanent wave",
+    "rock"
+  ],
+  "href": "https://api.spotify.com/v1/artists/0epOFNiUfyON9EYx7Tpr6V",
+  "id": "0epOFNiUfyON9EYx7Tpr6V",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/ab6761610000e5ebcaea403b29f6a09260b6a18a",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "url": "https://i.scdn.co/image/ab67616100005174caea403b29f6a09260b6a18a",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "url": "https://i.scdn.co/image/ab6761610000f178caea403b29f6a09260b6a18a",
+      "width": 160
+    }
+  ],
+  "name": "The Strokes",
+  "popularity": 77,
+  "type": "artist",
+  "uri": "spotify:artist:0epOFNiUfyON9EYx7Tpr6V"
+}

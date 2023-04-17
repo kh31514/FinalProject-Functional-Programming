@@ -4,13 +4,13 @@
   "artists": [
     {
       "external_urls": {
-        "spotify": "https://open.spotify.com/artist/6fC2AcsQtd9h4BWELbbire"
+        "spotify": "https://open.spotify.com/artist/08GQAI4eElDnROBrJRGE0X"
       },
-      "href": "https://api.spotify.com/v1/artists/6fC2AcsQtd9h4BWELbbire",
-      "id": "6fC2AcsQtd9h4BWELbbire",
-      "name": "Peach Pit",
+      "href": "https://api.spotify.com/v1/artists/08GQAI4eElDnROBrJRGE0X",
+      "id": "08GQAI4eElDnROBrJRGE0X",
+      "name": "Fleetwood Mac",
       "type": "artist",
-      "uri": "spotify:artist:6fC2AcsQtd9h4BWELbbire"
+      "uri": "spotify:artist:08GQAI4eElDnROBrJRGE0X"
     }
   ],
   "available_markets": [
@@ -37,7 +37,6 @@
     "BO",
     "BR",
     "BS",
-    "BT",
     "BW",
     "BY",
     "BZ",
@@ -80,7 +79,6 @@
     "GR",
     "GT",
     "GW",
-    "GY",
     "HK",
     "HN",
     "HR",
@@ -99,7 +97,6 @@
     "KE",
     "KG",
     "KH",
-    "KI",
     "KM",
     "KN",
     "KR",
@@ -121,7 +118,6 @@
     "MD",
     "ME",
     "MG",
-    "MH",
     "MK",
     "ML",
     "MN",
@@ -129,7 +125,6 @@
     "MR",
     "MT",
     "MU",
-    "MV",
     "MW",
     "MX",
     "MY",
@@ -141,7 +136,6 @@
     "NL",
     "NO",
     "NP",
-    "NR",
     "NZ",
     "OM",
     "PA",
@@ -152,14 +146,12 @@
     "PL",
     "PS",
     "PT",
-    "PW",
     "PY",
     "QA",
     "RO",
     "RS",
     "RW",
     "SA",
-    "SB",
     "SC",
     "SE",
     "SG",
@@ -168,7 +160,6 @@
     "SL",
     "SM",
     "SN",
-    "SR",
     "ST",
     "SV",
     "SZ",
@@ -178,10 +169,8 @@
     "TJ",
     "TL",
     "TN",
-    "TO",
     "TR",
     "TT",
-    "TV",
     "TW",
     "TZ",
     "UA",
@@ -192,39 +181,37 @@
     "VC",
     "VE",
     "VN",
-    "VU",
-    "WS",
     "XK",
     "ZA",
     "ZM",
     "ZW"
   ],
   "external_urls": {
-    "spotify": "https://open.spotify.com/album/6xduu32sm4aidoLhaxYkUA"
+    "spotify": "https://open.spotify.com/album/0BwWUstDMUbgq2NYONRqlu"
   },
-  "href": "https://api.spotify.com/v1/albums/6xduu32sm4aidoLhaxYkUA",
-  "id": "6xduu32sm4aidoLhaxYkUA",
+  "href": "https://api.spotify.com/v1/albums/0BwWUstDMUbgq2NYONRqlu",
+  "id": "0BwWUstDMUbgq2NYONRqlu",
   "images": [
     {
       "height": 640,
-      "url": "https://i.scdn.co/image/ab67616d0000b27300b39b4a73d28536690b355c",
+      "url": "https://i.scdn.co/image/ab67616d0000b273e52a59a28efa4773dd2bfe1b",
       "width": 640
     },
     {
       "height": 300,
-      "url": "https://i.scdn.co/image/ab67616d00001e0200b39b4a73d28536690b355c",
+      "url": "https://i.scdn.co/image/ab67616d00001e02e52a59a28efa4773dd2bfe1b",
       "width": 300
     },
     {
       "height": 64,
-      "url": "https://i.scdn.co/image/ab67616d0000485100b39b4a73d28536690b355c",
+      "url": "https://i.scdn.co/image/ab67616d00004851e52a59a28efa4773dd2bfe1b",
       "width": 64
     }
   ],
-  "name": "Being So Normal",
-  "release_date": "2018-06-28",
+  "name": "Rumours (Super Deluxe)",
+  "release_date": "1977-02-04",
   "release_date_precision": "day",
-  "total_tracks": 9,
+  "total_tracks": 58,
   "type": "album",
-  "uri": "spotify:album:6xduu32sm4aidoLhaxYkUA"
+  "uri": "spotify:album:0BwWUstDMUbgq2NYONRqlu"
 }
