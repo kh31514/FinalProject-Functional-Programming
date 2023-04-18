@@ -33,7 +33,7 @@
  (archives (byte api.cma) (native api.cmxa))
  (plugins (byte api.cma) (native api.cmxs))
  (native_archives api.a)
- (requires yojson)
+ (requires yojson ANSITerminal)
  (main_module_name Api)
  (modes byte native)
  (modules

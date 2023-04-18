@@ -30,7 +30,7 @@ type track = {
   disc_number : int;
   duration_ms : int;
   explicit : bool;
-  (* isrc : string; irsc = International Standard Recording Code *)
+  isrc : string; (* isrc = International Standard Recording Code *)
   spotify_link : string;
   href : string;
   id : string;
@@ -86,7 +86,7 @@ let track_of_json json =
     disc_number = json |> member "disc_number" |> to_int;
     duration_ms = json |> member "duration_ms" |> to_int;
     explicit = json |> member "explicit" |> to_bool;
-    (* isrc = json |> member "external_ids" |> member "isrc" |> to_string; *)
+    isrc = json |> member "external_ids" |> member "isrc" |> to_string;
     spotify_link =
       json |> member "external_urls" |> member "spotify" |> to_string;
     href = json |> member "href" |> to_string;
@@ -100,9 +100,13 @@ let track_of_json json =
     uri = json |> member "uri" |> to_string;
   }
 
-let get_track_name () =
+let get_track () =
   let json = Yojson.Basic.from_file "data/track.json" in
   let track = track_of_json json in
+  track
+
+let get_track_name () =
+  let track = get_track () in
   match track with
   | {
    album;
@@ -110,7 +114,7 @@ let get_track_name () =
    disc_number;
    duration_ms;
    explicit;
-   (* isrc; *)
+   isrc;
    spotify_link;
    href;
    id;
@@ -124,8 +128,7 @@ let get_track_name () =
   } -> name
 
 let get_track_artist () =
-  let json = Yojson.Basic.from_file "data/track.json" in
-  let track = track_of_json json in
+  let track = get_track () in
   match track with
   | {
    album;
@@ -133,7 +136,6 @@ let get_track_artist () =
    disc_number;
    duration_ms;
    explicit;
-   (* isrc; *)
    spotify_link;
    href;
    id;
@@ -156,7 +158,73 @@ let format_artists (artist_list : abbrev_artist list) =
     match name_list with
     | [] -> ""
     | [ a1 ] -> a1
-    | [ a1; a2 ] -> a1 ^ ", and " ^ a2
+    | [ a1; a2 ] -> a1 ^ " and " ^ a2
     | h :: t -> h ^ ", " ^ get_str t
   in
   get_str names
+
+let format_duration ms =
+  let seconds = ms / 1000 in
+  let minutes = seconds / 60 in
+  let remaining_seconds = seconds - (minutes * 60) in
+  string_of_int minutes ^ " minutes and "
+  ^ string_of_int remaining_seconds
+  ^ " seconds"
+
+let format_explicit explicit_bool =
+  if explicit_bool then "is explicit" else "is not explicit"
+
+let print_track_info track =
+  match track with
+  | {
+   album;
+   artists = track_artists;
+   disc_number;
+   duration_ms;
+   explicit;
+   spotify_link = track_spotify;
+   href;
+   id;
+   is_local;
+   name = track_name;
+   popularity;
+   preview_url;
+   track_number;
+   category;
+   uri;
+  } -> (
+      match album with
+      | {
+       album_group;
+       album_type;
+       artists = album_artists;
+       available_markets;
+       spotify_link;
+       href;
+       id;
+       images;
+       name = album_name;
+       release_date;
+       release_date_precision;
+       total_tracks;
+       category;
+       uri;
+      } ->
+          print_endline "Here's what I found:";
+          print_endline
+            ("\t" ^ track_name ^ " was produced by "
+            ^ format_artists track_artists
+            ^ " in "
+            ^ String.sub release_date 0 4
+            ^ ".");
+          print_endline
+            ("\t" ^ "It " ^ format_explicit explicit ^ ", lasts "
+            ^ format_duration duration_ms
+            ^ ", and has a popularity ranking of " ^ string_of_int popularity
+            ^ ".");
+          print_endline
+            ("\t" ^ "It is track number " ^ string_of_int track_number
+           ^ " in the album " ^ album_name ^ ".");
+          print_string "Want to listen now? Go to ";
+          ANSITerminal.print_string [ ANSITerminal.green ] spotify_link;
+          print_string "\n")

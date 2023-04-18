@@ -1,5 +1,5 @@
 description = ""
-requires = "yojson"
+requires = "ANSITerminal yojson"
 archive(byte) = "api.cma"
 archive(native) = "api.cmxa"
 plugin(byte) = "api.cma"

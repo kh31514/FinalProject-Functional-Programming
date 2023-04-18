@@ -56,7 +56,7 @@ let get_artist_name artist =
    id;
    images;
    name;
-   (* popularity; *)
+   popularity;
    category;
    uri;
   } -> name
