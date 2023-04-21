@@ -1,3 +1,5 @@
+exception UnknownSong of string
+
 (* type abbrev_artist represents an abbreviated version of type artist from
    Artist.ml. Unlike type artist, type abbrev_artist does not include the
    following attributes: follower_count, genres, images, and popularity *)
@@ -88,26 +90,29 @@ let abbrev_album_of_json json =
   }
 
 let track_of_json json =
-  {
-    album = json |> member "album" |> abbrev_album_of_json;
-    artists =
-      json |> member "artists" |> to_list |> List.map abbrev_artist_of_json;
-    disc_number = json |> member "disc_number" |> to_int;
-    duration_ms = json |> member "duration_ms" |> to_int;
-    explicit = json |> member "explicit" |> to_bool;
-    isrc = json |> member "external_ids" |> member "isrc" |> to_string;
-    spotify_link =
-      json |> member "external_urls" |> member "spotify" |> to_string;
-    href = json |> member "href" |> to_string;
-    id = json |> member "id" |> to_string;
-    is_local = json |> member "is_local" |> to_bool;
-    name = json |> member "name" |> to_string;
-    popularity = json |> member "popularity" |> to_int;
-    preview_url = json |> member "preview_url" |> to_string;
-    track_number = json |> member "track_number" |> to_int;
-    category = json |> member "type" |> to_string;
-    uri = json |> member "uri" |> to_string;
-  }
+  if json = `Null then
+    raise (UnknownSong (open_in "data/user_input.txt" |> input_line))
+  else
+    {
+      album = json |> member "album" |> abbrev_album_of_json;
+      artists =
+        json |> member "artists" |> to_list |> List.map abbrev_artist_of_json;
+      disc_number = json |> member "disc_number" |> to_int;
+      duration_ms = json |> member "duration_ms" |> to_int;
+      explicit = json |> member "explicit" |> to_bool;
+      isrc = json |> member "external_ids" |> member "isrc" |> to_string;
+      spotify_link =
+        json |> member "external_urls" |> member "spotify" |> to_string;
+      href = json |> member "href" |> to_string;
+      id = json |> member "id" |> to_string;
+      is_local = json |> member "is_local" |> to_bool;
+      name = json |> member "name" |> to_string;
+      popularity = json |> member "popularity" |> to_int;
+      preview_url = json |> member "preview_url" |> to_string;
+      track_number = json |> member "track_number" |> to_int;
+      category = json |> member "type" |> to_string;
+      uri = json |> member "uri" |> to_string;
+    }
 
 let get_track () =
   let json = Yojson.Basic.from_file "data/track.json" in

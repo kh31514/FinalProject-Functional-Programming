@@ -34,31 +34,39 @@ let rec handle_song song =
     Py.Run.eval ~start:Py.File "\nfrom authorization import *\nhandle_track()"
   in
   ();
-  let song' = Api.Track.get_track () in
-
-  print_string "Are you referring to ";
-  ANSITerminal.print_string [ ANSITerminal.green ]
-    (Api.Track.get_track_name song');
-  print_string " by ";
-  ANSITerminal.print_string [ ANSITerminal.green ]
-    (Api.Track.get_track_artist song');
-  print_string "? (y/n)\n";
-  match read_line () with
-  | exception End_of_file -> ()
-  | text -> (
-      let y_action () = Api.Track.print_track_info song' in
-      understand_y_n text y_action y_action;
-      (* TODO: make no_action *)
-      print_endline
-        "Would you like to search for a different song, artist, or album? (y/n)";
-      match read_line () with
-      | exception End_of_file -> ()
-      | text' ->
-          let y_action () =
-            print_endline "Please enter another song, artist, or album.";
-            parse ()
-          in
-          understand_y_n text' y_action print_closing)
+  try
+    let song' = Api.Track.get_track () in
+    print_string "Are you referring to ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (Api.Track.get_track_name song');
+    print_string " by ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (Api.Track.get_track_artist song');
+    print_string "? (y/n)\n";
+    match read_line () with
+    | exception End_of_file -> ()
+    | text -> (
+        let y_action () = Api.Track.print_track_info song' in
+        understand_y_n text y_action y_action;
+        (* TODO: make no_action *)
+        print_endline
+          "Would you like to search for a different song, artist, or album? \
+           (y/n)";
+        match read_line () with
+        | exception End_of_file -> ()
+        | text' ->
+            let y_action () =
+              print_endline "Please enter another song, artist, or album.";
+              parse ()
+            in
+            understand_y_n text' y_action print_closing)
+  with Api.Track.UnknownSong _ ->
+    print_string "Couldn't identify song ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (open_in "data/user_input.txt" |> input_line);
+    print_string "\n";
+    print_endline "Please enter a different song";
+    parse ()
 
 and handle_artist artist =
   upload_input artist;

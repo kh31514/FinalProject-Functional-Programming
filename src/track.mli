@@ -4,12 +4,16 @@
     artist(s), and album. It handles loading of that data from JSON as well as
     querying the data. *)
 
+exception UnknownSong of string
+(** Raised when the Spotify API cannot identify a given song. It carries the
+    identifier of the unknown song *)
+
 type track
 (** The abstract type of values representing Spotify tracks. *)
 
 val track_of_json : Yojson.Basic.t -> track
-(** [track_of_json j] is the Spotify track that [j] represents. Requires: [j] is
-    a valid JSON track representation. *)
+(** [track_of_json j] is the Spotify track that [j] represents. Raises
+    UnknownSong exception if [j] is an invalid JSON track representation (null). *)
 
 val get_track : unit -> track
 (** Reads data/track.json and returns the corresponding track *)
