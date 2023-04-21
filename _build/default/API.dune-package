@@ -5,6 +5,7 @@
  (lib
   (META
    album.ml
+   album.mli
    api.a
    api.cma
    api.cmi
@@ -14,17 +15,22 @@
    api.ml
    api__Album.cmi
    api__Album.cmt
+   api__Album.cmti
    api__Album.cmx
    api__Artist.cmi
    api__Artist.cmt
+   api__Artist.cmti
    api__Artist.cmx
    api__Track.cmi
    api__Track.cmt
+   api__Track.cmti
    api__Track.cmx
    artist.ml
+   artist.mli
    dune-package
    opam
-   track.ml))
+   track.ml
+   track.mli))
  (libexec (api.cmxs))
  (doc (README.md)))
 (library
@@ -49,13 +55,13 @@
      (module
       (obj_name api__Album)
       (visibility public)
-      (source (path Album) (impl (path album.ml))))
+      (source (path Album) (intf (path album.mli)) (impl (path album.ml))))
      (module
       (obj_name api__Artist)
       (visibility public)
-      (source (path Artist) (impl (path artist.ml))))
+      (source (path Artist) (intf (path artist.mli)) (impl (path artist.ml))))
      (module
       (obj_name api__Track)
       (visibility public)
-      (source (path Track) (impl (path track.ml))))))
+      (source (path Track) (intf (path track.mli)) (impl (path track.ml))))))
    (wrapped true))))

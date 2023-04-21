@@ -34,18 +34,21 @@ let rec handle_song song =
     Py.Run.eval ~start:Py.File "\nfrom authorization import *\nhandle_track()"
   in
   ();
+  let song' = Api.Track.get_track () in
 
   print_string "Are you referring to ";
-  ANSITerminal.print_string [ ANSITerminal.green ] (Api.Track.get_track_name ());
+  ANSITerminal.print_string [ ANSITerminal.green ]
+    (Api.Track.get_track_name song');
   print_string " by ";
   ANSITerminal.print_string [ ANSITerminal.green ]
-    (Api.Track.get_track_artist () |> Api.Track.format_artists);
+    (Api.Track.get_track_artist song');
   print_string "? (y/n)\n";
   match read_line () with
   | exception End_of_file -> ()
   | text -> (
-      let y_action () = Api.Track.print_track_info (Api.Track.get_track ()) in
+      let y_action () = Api.Track.print_track_info song' in
       understand_y_n text y_action y_action;
+      (* TODO: make no_action *)
       print_endline
         "Would you like to search for a different song, artist, or album? (y/n)";
       match read_line () with

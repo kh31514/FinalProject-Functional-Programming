@@ -1,3 +1,6 @@
+(* type abbrev_artist represents an abbreviated version of type artist from
+   Artist.ml. Unlike type artist, type abbrev_artist does not include the
+   following attributes: follower_count, genres, images, and popularity *)
 type abbrev_artist = {
   spotify_link : string;
   href : string;
@@ -7,6 +10,8 @@ type abbrev_artist = {
   uri : string;
 }
 
+(* type abbrev_album is the same as type album from Album.ml except,
+   abbrev_album utilizes the type abbrev_artist (see above) instead of artist *)
 type abbrev_album = {
   album_group : string;
   album_type : string;
@@ -45,6 +50,8 @@ type track = {
 
 open Yojson.Basic.Util
 
+(* [abbrev_artist_of_json j] is the abbreviated artist that [j] represents.
+   Requires: [j] is a valid JSON abbreviated artist representation. *)
 let abbrev_artist_of_json json =
   {
     spotify_link =
@@ -56,6 +63,8 @@ let abbrev_artist_of_json json =
     uri = json |> member "uri" |> to_string;
   }
 
+(* [abbrev_album_of_json j] is the abbreviated album that [j] represents.
+   Requires: [j] is a valid JSON abbreviated album representation. *)
 let abbrev_album_of_json json =
   {
     album_group = json |> member "album_group" |> to_string;
@@ -105,8 +114,7 @@ let get_track () =
   let track = track_of_json json in
   track
 
-let get_track_name () =
-  let track = get_track () in
+let get_track_name track =
   match track with
   | {
    album;
@@ -127,8 +135,25 @@ let get_track_name () =
    uri;
   } -> name
 
-let get_track_artist () =
-  let track = get_track () in
+(** [get_abbrev_artist_name a] returns the name of abbreviated artist [a]. *)
+let get_abbrev_artist_name (a : abbrev_artist) =
+  match a with
+  | { spotify_link; href; id; name; category; uri } -> name
+
+(* [format_artists] translates an abbrev_artist list to a readable string of
+   each artist's name. *)
+let format_artists (artist_list : abbrev_artist list) =
+  let names = List.map get_abbrev_artist_name artist_list in
+  let rec get_str (name_list : string list) =
+    match name_list with
+    | [] -> ""
+    | [ a1 ] -> a1
+    | [ a1; a2 ] -> a1 ^ " and " ^ a2
+    | h :: t -> h ^ ", " ^ get_str t
+  in
+  get_str names
+
+let get_track_artist track =
   match track with
   | {
    album;
@@ -146,23 +171,10 @@ let get_track_artist () =
    track_number;
    category;
    uri;
-  } -> artists
+  } -> artists |> format_artists
 
-let get_abbrev_artist_name (a : abbrev_artist) =
-  match a with
-  | { spotify_link; href; id; name; category; uri } -> name
-
-let format_artists (artist_list : abbrev_artist list) =
-  let names = List.map get_abbrev_artist_name artist_list in
-  let rec get_str (name_list : string list) =
-    match name_list with
-    | [] -> ""
-    | [ a1 ] -> a1
-    | [ a1; a2 ] -> a1 ^ " and " ^ a2
-    | h :: t -> h ^ ", " ^ get_str t
-  in
-  get_str names
-
+(* [format duration t] translates [t] from milisecods to a readable string of "_
+   minutes and _ seconds" *)
 let format_duration ms =
   let seconds = ms / 1000 in
   let minutes = seconds / 60 in
@@ -171,6 +183,8 @@ let format_duration ms =
   ^ string_of_int remaining_seconds
   ^ " seconds"
 
+(* [format_explicit [b] translates an explict boolean [b] to the string "is/is
+   not explicit" depending on the value of [b] *)
 let format_explicit explicit_bool =
   if explicit_bool then "is explicit" else "is not explicit"
 
