@@ -24,7 +24,7 @@ let rec understand_y_n input y_action n_action =
 
 let print_closing () =
   print_endline "Thank you for using SpotiCaml!";
-  ()
+  exit 0
 
 (** [handle_song song] will print information about [song] (ex. artist, album,
     duration, genre) *)
@@ -47,7 +47,7 @@ let rec handle_song song =
     | exception End_of_file -> ()
     | text -> (
         let y_action () = Api.Track.print_track_info song' in
-        understand_y_n text y_action y_action;
+        understand_y_n text y_action (not_song song);
         (* TODO: make no_action *)
         print_endline
           "Would you like to search for a different song, artist, or album? \
@@ -55,17 +55,17 @@ let rec handle_song song =
         match read_line () with
         | exception End_of_file -> ()
         | text' ->
-            let y_action () =
+            let y_action' () =
               print_endline "Please enter another song, artist, or album.";
               parse ()
             in
-            understand_y_n text' y_action print_closing)
+            understand_y_n text' y_action' print_closing)
   with Api.Track.UnknownSong _ ->
     print_string "Couldn't identify song ";
     ANSITerminal.print_string [ ANSITerminal.green ]
       (open_in "data/user_input.txt" |> input_line);
     print_string "\n";
-    print_endline "Please enter a different song";
+    print_endline "Please enter a different song, artist, or album";
     parse ()
 
 and handle_artist artist =
@@ -101,6 +101,14 @@ and parse () =
           ANSITerminal.print_string [ ANSITerminal.green ] weird_input;
           print_string ".\n";
           parse ())
+
+and not_song song () =
+  print_string "What artist produced ";
+  ANSITerminal.print_string [ ANSITerminal.green ] song;
+  print_string "?\n";
+  match read_line () with
+  | exception End_of_file -> ()
+  | artist -> handle_song (song ^ "\n" ^ artist)
 
 (** [main ()] prompts the user for a command, then executes the given command or
     displays a helpful error message *)

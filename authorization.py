@@ -82,10 +82,15 @@ def handle_album():
     return
 
 
-def search_for_track(token, track_name):
+def search_for_track(token, track_name, artist_name):
+    track_name = track_name.replace(" ", "%")
+    artist_name = artist_name.replace(" ", "%")
     url = "https://api.spotify.com/v1/search"
     headers = get_auth_header(token)
-    query = f"?q={track_name}&type=track&limit=1"
+    if artist_name == "":
+        query = f"?q={track_name}&type=track&limit=1"
+    else:
+        query = f"?q=name:{track_name}%20artist:{artist_name}&type=track&limit=1"
 
     query_url = url + query
     result = get(query_url, headers=headers)
@@ -97,11 +102,17 @@ def search_for_track(token, track_name):
 
 def handle_track():
     with open('data/user_input.txt') as f:
-        album = f.readlines()  # returns a list
+        track = f.readlines()  # returns a list
     # grabs the firts (and only) string in the list and removes the trailing newline character
-    album = album[0].strip()
+    track_name = track[0].strip()
     token = get_token()
-    result = search_for_track(token, album)
+    try:
+        artist = track[1].strip()
+    except:
+        result = search_for_track(token, track_name, "")
+    else:
+        result = search_for_track(token, track_name, artist)
+
     with open("data/track.json", "w") as f:
         json.dump(result, f)
     return
