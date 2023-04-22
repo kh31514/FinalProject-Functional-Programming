@@ -48,7 +48,6 @@ let rec handle_song song =
     | text -> (
         let y_action () = Api.Track.print_track_info song' in
         understand_y_n text y_action (not_song song);
-        (* TODO: make no_action *)
         print_endline
           "Would you like to search for a different song, artist, or album? \
            (y/n)";
@@ -103,12 +102,18 @@ and parse () =
           parse ())
 
 and not_song song () =
-  print_string "What artist produced ";
-  ANSITerminal.print_string [ ANSITerminal.green ] song;
-  print_string "?\n";
-  match read_line () with
-  | exception End_of_file -> ()
-  | artist -> handle_song (song ^ "\n" ^ artist)
+  let ask_for_artist s =
+    print_string "What artist produced ";
+    ANSITerminal.print_string [ ANSITerminal.green ] s;
+    print_string "?\n";
+    match read_line () with
+    | exception End_of_file -> ()
+    | artist -> handle_song (s ^ "\n" ^ artist)
+  in
+  try
+    let ind = String.index song '\n' in
+    ask_for_artist (String.sub song 0 ind)
+  with Not_found -> ask_for_artist song
 
 (** [main ()] prompts the user for a command, then executes the given command or
     displays a helpful error message *)
