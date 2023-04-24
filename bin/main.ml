@@ -1,4 +1,4 @@
-(* source: https://github.com/thierry-martinez/pyml *)
+(*source: https://github.com/thierry-martinez/pyml*)
 let () = Py.initialize ()
 
 (* source: https://ocaml.org/docs/file-manipulation#example *)
@@ -19,6 +19,7 @@ let handle_song song = ()
 (** [handle_artist artist] will print information about [artist] (ex. top 5
     songs/albums, age, number of songs produced, popularity) *)
 let handle_artist artist =
+  (*Sys.command (./handle_art artist)*)
   upload_input artist;
   Py.Run.eval ~start:Py.File "\nfrom authorization import *\nhandle_artist()";
   print_endline (Api.Artist.get_artist_name ())
