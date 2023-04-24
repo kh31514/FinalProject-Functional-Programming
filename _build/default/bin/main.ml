@@ -86,20 +86,24 @@ and handle_album album =
 and parse () =
   match read_line () with
   | exception End_of_file -> ()
-  | text -> (
+  | text ->
       print_string "Is ";
       ANSITerminal.print_string [ ANSITerminal.green ] text;
       print_string " a song, artist, or album?\n";
-      match read_line () with
-      | exception End_of_file -> ()
-      | "song" -> handle_song text
-      | "artist" -> handle_artist text
-      | "album" -> handle_album text
-      | weird_input ->
-          print_string "Can't deciper ";
-          ANSITerminal.print_string [ ANSITerminal.green ] weird_input;
-          print_string ".\n";
-          parse ())
+      let rec song_art_alb () =
+        match read_line () with
+        | exception End_of_file -> ()
+        | "song" -> handle_song text
+        | "artist" -> handle_artist text
+        | "album" -> handle_album text
+        | weird_input ->
+            print_string "Can't deciper ";
+            ANSITerminal.print_string [ ANSITerminal.green ] weird_input;
+            print_string ".\n";
+            print_endline "Please enter \"song,\" \"artist,\" or \"album.\"";
+            song_art_alb ()
+      in
+      song_art_alb ()
 
 and not_song song () =
   let ask_for_artist s =
