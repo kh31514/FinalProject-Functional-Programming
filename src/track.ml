@@ -1,5 +1,11 @@
 exception UnknownSong of string
 
+type image = {
+  height : int;
+  url : string;
+  width : int;
+}
+
 (* type abbrev_artist represents an abbreviated version of type artist from
    Artist.ml. Unlike type artist, type abbrev_artist does not include the
    following attributes: follower_count, genres, images, and popularity *)
@@ -22,7 +28,7 @@ type abbrev_album = {
   spotify_link : string;
   href : string;
   id : string;
-  images : Artist.image list;
+  images : image list;
   name : string;
   release_date : string;
   release_date_precision : string;
@@ -52,6 +58,13 @@ type track = {
 
 open Yojson.Basic.Util
 
+let image_of_json json =
+  {
+    height = json |> member "height" |> to_int;
+    url = json |> member "url" |> to_string;
+    width = json |> member "width" |> to_int;
+  }
+
 (* [abbrev_artist_of_json j] is the abbreviated artist that [j] represents.
    Requires: [j] is a valid JSON abbreviated artist representation. *)
 let abbrev_artist_of_json json =
@@ -74,12 +87,13 @@ let abbrev_album_of_json json =
     artists =
       json |> member "artists" |> to_list |> List.map abbrev_artist_of_json;
     available_markets =
-      json |> member "available_markets" |> to_list |> List.map to_string;
+      (try json |> member "available_markets" |> to_list |> List.map to_string
+       with _ -> []);
     spotify_link =
       json |> member "external_urls" |> member "spotify" |> to_string;
     href = json |> member "href" |> to_string;
     id = json |> member "id" |> to_string;
-    images = json |> member "images" |> to_list |> List.map Artist.image_of_json;
+    images = json |> member "images" |> to_list |> List.map image_of_json;
     name = json |> member "name" |> to_string;
     release_date = json |> member "release_date" |> to_string;
     release_date_precision =
@@ -108,7 +122,8 @@ let track_of_json json =
       is_local = json |> member "is_local" |> to_bool;
       name = json |> member "name" |> to_string;
       popularity = json |> member "popularity" |> to_int;
-      preview_url = json |> member "preview_url" |> to_string;
+      preview_url =
+        (try json |> member "preview_url" |> to_string with _ -> "");
       track_number = json |> member "track_number" |> to_int;
       category = json |> member "type" |> to_string;
       uri = json |> member "uri" |> to_string;
@@ -217,7 +232,7 @@ let print_track_info track =
        album_group;
        album_type;
        artists = album_artists;
-       available_markets;
+       (* available_markets; *)
        spotify_link;
        href;
        id;

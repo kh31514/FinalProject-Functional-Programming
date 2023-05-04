@@ -7,8 +7,8 @@ import json
 
 load_dotenv()
 
-client_id = "76af978f82c3430bb2fe9661b6147767"
-client_secret = "aa3b6d552ada418bbdbc6b4b9105126a"
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
 
 
 def get_token():
@@ -31,8 +31,8 @@ def get_token():
 def get_auth_header(token):
     return {"Authorization": "Bearer " + token}
 
-
 def search_for_artist(token, artist_name):
+    artist_name = artist_name.replace(" ", "%")
     url = "https://api.spotify.com/v1/search"
     headers = get_auth_header(token)
     query = f"?q={artist_name}&type=artist&limit=1"
@@ -44,6 +44,19 @@ def search_for_artist(token, artist_name):
         return None
     return json_result[0]
 
+def get_artist_id(artist_name):
+    with open('data/artist.json') as json_file:
+        data = json.load(json_file)
+    return data["id"]
+
+def get_top_tracks(token, artist_name):
+    artist_name = artist_name.replace(" ", "%")
+    id = get_artist_id(artist_name)
+    url = f"https://api.spotify.com/v1/artists/{id}/top-tracks?country=US"
+    headers = get_auth_header(token)
+    result = get(url, headers=headers)
+    json_result = json.loads(result.content)["tracks"]
+    return json_result[0:5]
 
 def handle_artist():
     with open('data/user_input.txt') as f:
@@ -54,8 +67,12 @@ def handle_artist():
     result = search_for_artist(token, artist)
     with open("data/artist.json", "w") as f:
         json.dump(result, f)
+    result = get_top_tracks(token, artist)
+    with open("data/top_artist_tracks.json", "w") as f:
+        json.dump(result, f)
     return
 
+handle_artist()
 
 def search_for_album(token, album_name):
     url = "https://api.spotify.com/v1/search"

@@ -1,13 +1,19 @@
 (* source: https://github.com/thierry-martinez/pyml *)
 let () = Py.initialize ()
 
-(* source: https://ocaml.org/docs/file-manipulation#example *)
+(* [upload_input i] will save the user's input to "data/user_input.txt". This
+   file is later read by authorization.py to gather information from the Spotify
+   API. Source: https://ocaml.org/docs/file-manipulation#example *)
 let upload_input input =
   let oc = open_out "data/user_input.txt" in
   Printf.fprintf oc "%s\n" input;
   close_out oc;
   ()
 
+(** [understand_y_n i y n] completes action [y] if the user answers "y" and
+    completes action [n] if the user enters "n". If the user enters something
+    other than "y", "Y", "n", or "N" the user will be prompted for a new
+    response. *)
 let rec understand_y_n input y_action n_action =
   match input with
   | "y" | "Y" -> y_action ()
@@ -26,8 +32,6 @@ let print_closing () =
   print_endline "Thank you for using SpotiCaml!";
   exit 0
 
-(** [handle_song song] will print information about [song] (ex. artist, album,
-    duration, genre) *)
 let rec handle_song song =
   upload_input song;
   let _ =
@@ -73,7 +77,35 @@ and handle_artist artist =
     Py.Run.eval ~start:Py.File "\nfrom authorization import *\nhandle_artist()"
   in
   ();
-  ()
+  try
+    let artist' = Api.Artist.get_artist () in
+    print_string "Are you referring to ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (Api.Artist.get_artist_name artist');
+    print_string "? (y/n)\n";
+    match read_line () with
+    | exception End_of_file -> ()
+    | text -> (
+        let y_action () = Api.Artist.print_artist_info artist' in
+        understand_y_n text y_action (not_artist artist);
+        print_endline
+          "Would you like to search for a different song, artist, or album? \
+           (y/n)";
+        match read_line () with
+        | exception End_of_file -> ()
+        | text' ->
+            let y_action' () =
+              print_endline "Please enter another song, artist, or album.";
+              parse ()
+            in
+            understand_y_n text' y_action' print_closing)
+  with Api.Artist.UnknownArtist _ ->
+    print_string "Couldn't identify artist ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (open_in "data/user_input.txt" |> input_line);
+    print_string "\n";
+    print_endline "Please enter a different song, artist, or album";
+    parse ()
 
 and handle_album album =
   upload_input album;
@@ -119,8 +151,11 @@ and not_song song () =
     ask_for_artist (String.sub song 0 ind)
   with Not_found -> ask_for_artist song
 
-(** [main ()] prompts the user for a command, then executes the given command or
-    displays a helpful error message *)
+and not_artist artist () =
+  print_endline ("Sorry we couldn't find " ^ artist ^ ".");
+  print_endline "Please enter a different song, artist, or album.";
+  parse ()
+
 let main () =
   ANSITerminal.print_string [ ANSITerminal.green ]
     "\n\nWelcome to SpotiCaml. Start by entering a song, artist, or album.\n";
