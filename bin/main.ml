@@ -1,9 +1,9 @@
 (* source: https://github.com/thierry-martinez/pyml *)
 let () = Py.initialize ()
 
-(* [upload_input i] will save the user's input to "data/user_input.txt". This
-   file is later read by authorization.py to gather information from the Spotify
-   API. Source: https://ocaml.org/docs/file-manipulation#example *)
+(** [upload_input i] will save the user's input to "data/user_input.txt". This
+    file is later read by authorization.py to gather information from the
+    Spotify API. Source: https://ocaml.org/docs/file-manipulation#example *)
 let upload_input input =
   let oc = open_out "data/user_input.txt" in
   Printf.fprintf oc "%s\n" input;

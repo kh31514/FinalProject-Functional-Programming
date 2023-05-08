@@ -1,1 +1,1 @@
-src/album.ml: Artist List Yojson
+src/album.ml: ANSITerminal Artist List String Track Yojson

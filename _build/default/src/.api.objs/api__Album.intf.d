@@ -1,1 +1,1 @@
-src/album.mli:
+src/album.mli: Yojson

@@ -11,6 +11,11 @@ exception UnknownSong of string
 type track
 (** The abstract type of values representing Spotify tracks. *)
 
+type abbrev_artist
+
+val abbrev_artist_of_json : Yojson.Basic.t -> abbrev_artist
+val format_artists : abbrev_artist list -> string
+
 val track_of_json : Yojson.Basic.t -> track
 (** [track_of_json j] is the Spotify track that [j] represents. Raises
     UnknownSong exception if [j] is an invalid JSON track representation (null). *)
