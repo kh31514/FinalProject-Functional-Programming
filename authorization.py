@@ -72,8 +72,6 @@ def handle_artist():
         json.dump(result, f)
     return
 
-handle_artist()
-
 def search_for_album(token, album_name):
     url = "https://api.spotify.com/v1/search"
     headers = get_auth_header(token)
@@ -133,3 +131,4 @@ def handle_track():
     with open("data/track.json", "w") as f:
         json.dump(result, f)
     return
+
