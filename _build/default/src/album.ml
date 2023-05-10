@@ -17,6 +17,8 @@ type album = {
   uri : string;
 }
 
+type abbrev_track = { name : string }
+
 open Yojson.Basic.Util
 
 let album_of_json json =
@@ -45,6 +47,8 @@ let album_of_json json =
       category = json |> member "type" |> to_string;
       uri = json |> member "uri" |> to_string;
     }
+
+let abbrev_track_of_json json = { name = json |> member "name" |> to_string }
 
 let get_album () =
   let json = Yojson.Basic.from_file "data/album.json" in
@@ -87,9 +91,19 @@ let get_album_artists album =
    total_tracks;
    category;
    uri;
-  } -> artists
+  } -> Track.format_artists artists
 
-(* let get_album_tracks () : Track.track list = *)
+let get_album_tracks () =
+  let json = Yojson.Basic.from_file "data/album_tracks.json" in
+  let track_list = json |> to_list |> List.map abbrev_track_of_json in
+  track_list
+
+let rec album_track_string track_list ind =
+  match track_list with
+  | [] -> ""
+  | h :: t ->
+      "\t" ^ string_of_int ind ^ ". " ^ h.name ^ "\n"
+      ^ album_track_string t (ind + 1)
 
 let print_album_info album =
   match album with
@@ -111,15 +125,17 @@ let print_album_info album =
   } ->
       print_endline "Here's what I found:";
       print_endline
-        (name ^ "was produced by "
+        ("\t" ^ name ^ " was produced by "
         ^ Track.format_artists artists
-        ^ "in"
-        ^ String.sub release_date 0 4);
-      if total_tracks >= 4 then
+        ^ " in "
+        ^ String.sub release_date 0 4
+        ^ ".");
+      if total_tracks > 15 then
         print_endline
-          (name ^ " has a total of " ^ string_of_int total_tracks
+          ("\t" ^ name ^ " has a total of " ^ string_of_int total_tracks
          ^ " tracks, some of which include ")
-      else print_endline "";
+      else print_endline ("\t" ^ name ^ " includes the following songs:");
+      print_string (album_track_string (get_album_tracks ()) 1);
       print_string "Want to listen now? Go to ";
       ANSITerminal.print_string [ ANSITerminal.green ] spotify_link;
       print_string "\n"

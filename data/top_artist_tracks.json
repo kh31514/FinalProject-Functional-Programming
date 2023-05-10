@@ -1,392 +1,392 @@
 [
   {
     "album": {
-      "album_group": "album",
-      "album_type": "album",
+      "album_group": "single",
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+            "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
           },
-          "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-          "id": "3WrFJ7ztbogyGnTHbHJFl2",
-          "name": "The Beatles",
+          "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+          "id": "1ePVqRHwkjRf7y2XRyHE2p",
+          "name": "Free Arlo",
           "type": "artist",
-          "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+          "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
         }
       ],
       "external_urls": {
-        "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN"
+        "spotify": "https://open.spotify.com/album/5d2guNVGiOb00vUjXzUk0N"
       },
-      "href": "https://api.spotify.com/v1/albums/0ETFjACtuP2ADo6LFhL6HN",
-      "id": "0ETFjACtuP2ADo6LFhL6HN",
+      "href": "https://api.spotify.com/v1/albums/5d2guNVGiOb00vUjXzUk0N",
+      "id": "5d2guNVGiOb00vUjXzUk0N",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273dc30583ba717007b00cceb25",
+          "url": "https://i.scdn.co/image/ab67616d0000b273dadacb534147e98271fc12d0",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02dc30583ba717007b00cceb25",
+          "url": "https://i.scdn.co/image/ab67616d00001e02dadacb534147e98271fc12d0",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851dc30583ba717007b00cceb25",
+          "url": "https://i.scdn.co/image/ab67616d00004851dadacb534147e98271fc12d0",
           "width": 64
         }
       ],
       "is_playable": true,
-      "name": "Abbey Road (Remastered)",
-      "release_date": "1969-09-26",
+      "name": "getting over u",
+      "release_date": "2022-08-12",
       "release_date_precision": "day",
-      "total_tracks": 17,
+      "total_tracks": 1,
       "type": "album",
-      "uri": "spotify:album:0ETFjACtuP2ADo6LFhL6HN"
+      "uri": "spotify:album:5d2guNVGiOb00vUjXzUk0N"
     },
     "artists": [
       {
         "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+          "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
         },
-        "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-        "id": "3WrFJ7ztbogyGnTHbHJFl2",
-        "name": "The Beatles",
+        "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+        "id": "1ePVqRHwkjRf7y2XRyHE2p",
+        "name": "Free Arlo",
         "type": "artist",
-        "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+        "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
       }
     ],
     "disc_number": 1,
-    "duration_ms": 185733,
+    "duration_ms": 155852,
     "explicit": false,
     "external_ids": {
-      "isrc": "GBAYE0601696"
+      "isrc": "QM24S2203061"
     },
     "external_urls": {
-      "spotify": "https://open.spotify.com/track/6dGnYIeXmHdcikdzNNDMm2"
+      "spotify": "https://open.spotify.com/track/5OwfB6WzecLsx3gQ2HNFzt"
     },
-    "href": "https://api.spotify.com/v1/tracks/6dGnYIeXmHdcikdzNNDMm2",
-    "id": "6dGnYIeXmHdcikdzNNDMm2",
+    "href": "https://api.spotify.com/v1/tracks/5OwfB6WzecLsx3gQ2HNFzt",
+    "id": "5OwfB6WzecLsx3gQ2HNFzt",
     "is_local": false,
     "is_playable": true,
-    "name": "Here Comes The Sun - Remastered 2009",
-    "popularity": 84,
-    "preview_url": null,
-    "track_number": 7,
-    "type": "track",
-    "uri": "spotify:track:6dGnYIeXmHdcikdzNNDMm2"
-  },
-  {
-    "album": {
-      "album_group": "album",
-      "album_type": "album",
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
-          },
-          "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-          "id": "3WrFJ7ztbogyGnTHbHJFl2",
-          "name": "The Beatles",
-          "type": "artist",
-          "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
-        }
-      ],
-      "external_urls": {
-        "spotify": "https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN"
-      },
-      "href": "https://api.spotify.com/v1/albums/0ETFjACtuP2ADo6LFhL6HN",
-      "id": "0ETFjACtuP2ADo6LFhL6HN",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273dc30583ba717007b00cceb25",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02dc30583ba717007b00cceb25",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851dc30583ba717007b00cceb25",
-          "width": 64
-        }
-      ],
-      "is_playable": true,
-      "name": "Abbey Road (Remastered)",
-      "release_date": "1969-09-26",
-      "release_date_precision": "day",
-      "total_tracks": 17,
-      "type": "album",
-      "uri": "spotify:album:0ETFjACtuP2ADo6LFhL6HN"
-    },
-    "artists": [
-      {
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
-        },
-        "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-        "id": "3WrFJ7ztbogyGnTHbHJFl2",
-        "name": "The Beatles",
-        "type": "artist",
-        "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
-      }
-    ],
-    "disc_number": 1,
-    "duration_ms": 259946,
-    "explicit": false,
-    "external_ids": {
-      "isrc": "GBAYE0601690"
-    },
-    "external_urls": {
-      "spotify": "https://open.spotify.com/track/2EqlS6tkEnglzr7tkKAAYD"
-    },
-    "href": "https://api.spotify.com/v1/tracks/2EqlS6tkEnglzr7tkKAAYD",
-    "id": "2EqlS6tkEnglzr7tkKAAYD",
-    "is_local": false,
-    "is_playable": true,
-    "name": "Come Together - Remastered 2009",
-    "popularity": 79,
-    "preview_url": null,
+    "name": "getting over u",
+    "popularity": 50,
+    "preview_url": "https://p.scdn.co/mp3-preview/88440b1e27c77ebd80ce47dc394a0b1ec88361e2?cid=76af978f82c3430bb2fe9661b6147767",
     "track_number": 1,
     "type": "track",
-    "uri": "spotify:track:2EqlS6tkEnglzr7tkKAAYD"
+    "uri": "spotify:track:5OwfB6WzecLsx3gQ2HNFzt"
   },
   {
     "album": {
-      "album_group": "album",
-      "album_type": "album",
+      "album_group": "single",
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+            "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
           },
-          "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-          "id": "3WrFJ7ztbogyGnTHbHJFl2",
-          "name": "The Beatles",
+          "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+          "id": "1ePVqRHwkjRf7y2XRyHE2p",
+          "name": "Free Arlo",
           "type": "artist",
-          "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+          "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
         }
       ],
       "external_urls": {
-        "spotify": "https://open.spotify.com/album/0jTGHV5xqHPvEcwL8f6YU5"
+        "spotify": "https://open.spotify.com/album/1LYw0S4zEJgYQX5ECLanOn"
       },
-      "href": "https://api.spotify.com/v1/albums/0jTGHV5xqHPvEcwL8f6YU5",
-      "id": "0jTGHV5xqHPvEcwL8f6YU5",
+      "href": "https://api.spotify.com/v1/albums/1LYw0S4zEJgYQX5ECLanOn",
+      "id": "1LYw0S4zEJgYQX5ECLanOn",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27384243a01af3c77b56fe01ab1",
+          "url": "https://i.scdn.co/image/ab67616d0000b273a17db521798f2f221db1abc3",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0284243a01af3c77b56fe01ab1",
+          "url": "https://i.scdn.co/image/ab67616d00001e02a17db521798f2f221db1abc3",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485184243a01af3c77b56fe01ab1",
+          "url": "https://i.scdn.co/image/ab67616d00004851a17db521798f2f221db1abc3",
           "width": 64
         }
       ],
       "is_playable": true,
-      "name": "Let It Be (Remastered)",
-      "release_date": "1970-05-08",
+      "name": "ur bf sux",
+      "release_date": "2023-03-03",
       "release_date_precision": "day",
-      "total_tracks": 12,
+      "total_tracks": 1,
       "type": "album",
-      "uri": "spotify:album:0jTGHV5xqHPvEcwL8f6YU5"
+      "uri": "spotify:album:1LYw0S4zEJgYQX5ECLanOn"
     },
     "artists": [
       {
         "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+          "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
         },
-        "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-        "id": "3WrFJ7ztbogyGnTHbHJFl2",
-        "name": "The Beatles",
+        "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+        "id": "1ePVqRHwkjRf7y2XRyHE2p",
+        "name": "Free Arlo",
         "type": "artist",
-        "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+        "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
       }
     ],
     "disc_number": 1,
-    "duration_ms": 243026,
+    "duration_ms": 160615,
     "explicit": false,
     "external_ids": {
-      "isrc": "GBAYE0601713"
+      "isrc": "QM24S2300663"
     },
     "external_urls": {
-      "spotify": "https://open.spotify.com/track/7iN1s7xHE4ifF5povM6A48"
+      "spotify": "https://open.spotify.com/track/6YDwThWxybxe8UHJSYKLuF"
     },
-    "href": "https://api.spotify.com/v1/tracks/7iN1s7xHE4ifF5povM6A48",
-    "id": "7iN1s7xHE4ifF5povM6A48",
+    "href": "https://api.spotify.com/v1/tracks/6YDwThWxybxe8UHJSYKLuF",
+    "id": "6YDwThWxybxe8UHJSYKLuF",
     "is_local": false,
     "is_playable": true,
-    "name": "Let It Be - Remastered 2009",
-    "popularity": 79,
-    "preview_url": null,
-    "track_number": 6,
+    "name": "ur bf sux",
+    "popularity": 45,
+    "preview_url": "https://p.scdn.co/mp3-preview/adaadb670e18f29d620d5fe9bea330f549e941eb?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 1,
     "type": "track",
-    "uri": "spotify:track:7iN1s7xHE4ifF5povM6A48"
+    "uri": "spotify:track:6YDwThWxybxe8UHJSYKLuF"
   },
   {
     "album": {
-      "album_group": "album",
-      "album_type": "album",
+      "album_group": "single",
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+            "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
           },
-          "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-          "id": "3WrFJ7ztbogyGnTHbHJFl2",
-          "name": "The Beatles",
+          "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+          "id": "1ePVqRHwkjRf7y2XRyHE2p",
+          "name": "Free Arlo",
           "type": "artist",
-          "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+          "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
         }
       ],
       "external_urls": {
-        "spotify": "https://open.spotify.com/album/0PT5m6hwPRrpBwIHVnvbFX"
+        "spotify": "https://open.spotify.com/album/0SUdp9CiSPBkdUAfntxRDm"
       },
-      "href": "https://api.spotify.com/v1/albums/0PT5m6hwPRrpBwIHVnvbFX",
-      "id": "0PT5m6hwPRrpBwIHVnvbFX",
+      "href": "https://api.spotify.com/v1/albums/0SUdp9CiSPBkdUAfntxRDm",
+      "id": "0SUdp9CiSPBkdUAfntxRDm",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273e3e3b64cea45265469d4cafa",
+          "url": "https://i.scdn.co/image/ab67616d0000b2739f86fe16e662b09ec6a4b504",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02e3e3b64cea45265469d4cafa",
+          "url": "https://i.scdn.co/image/ab67616d00001e029f86fe16e662b09ec6a4b504",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851e3e3b64cea45265469d4cafa",
+          "url": "https://i.scdn.co/image/ab67616d000048519f86fe16e662b09ec6a4b504",
           "width": 64
         }
       ],
       "is_playable": true,
-      "name": "Help! (Remastered)",
-      "release_date": "1965-08-06",
+      "name": "another EP",
+      "release_date": "2021-01-08",
       "release_date_precision": "day",
-      "total_tracks": 14,
+      "total_tracks": 6,
       "type": "album",
-      "uri": "spotify:album:0PT5m6hwPRrpBwIHVnvbFX"
+      "uri": "spotify:album:0SUdp9CiSPBkdUAfntxRDm"
     },
     "artists": [
       {
         "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+          "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
         },
-        "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-        "id": "3WrFJ7ztbogyGnTHbHJFl2",
-        "name": "The Beatles",
+        "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+        "id": "1ePVqRHwkjRf7y2XRyHE2p",
+        "name": "Free Arlo",
         "type": "artist",
-        "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+        "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
       }
     ],
     "disc_number": 1,
-    "duration_ms": 125666,
-    "explicit": false,
+    "duration_ms": 197391,
+    "explicit": true,
     "external_ids": {
-      "isrc": "GBAYE0601477"
+      "isrc": "USLD91725876"
     },
     "external_urls": {
-      "spotify": "https://open.spotify.com/track/3BQHpFgAp4l80e1XslIjNI"
+      "spotify": "https://open.spotify.com/track/6wZ2PLL6A45oke6W1SpFkQ"
     },
-    "href": "https://api.spotify.com/v1/tracks/3BQHpFgAp4l80e1XslIjNI",
-    "id": "3BQHpFgAp4l80e1XslIjNI",
+    "href": "https://api.spotify.com/v1/tracks/6wZ2PLL6A45oke6W1SpFkQ",
+    "id": "6wZ2PLL6A45oke6W1SpFkQ",
     "is_local": false,
     "is_playable": true,
-    "name": "Yesterday - Remastered 2009",
-    "popularity": 78,
-    "preview_url": null,
-    "track_number": 13,
+    "name": "monday",
+    "popularity": 37,
+    "preview_url": "https://p.scdn.co/mp3-preview/3719f3944f8543f638047bc20dcda7bd71c8343a?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 3,
     "type": "track",
-    "uri": "spotify:track:3BQHpFgAp4l80e1XslIjNI"
+    "uri": "spotify:track:6wZ2PLL6A45oke6W1SpFkQ"
   },
   {
     "album": {
-      "album_group": "album",
-      "album_type": "album",
+      "album_group": "single",
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+            "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
           },
-          "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-          "id": "3WrFJ7ztbogyGnTHbHJFl2",
-          "name": "The Beatles",
+          "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+          "id": "1ePVqRHwkjRf7y2XRyHE2p",
+          "name": "Free Arlo",
           "type": "artist",
-          "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+          "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
         }
       ],
       "external_urls": {
-        "spotify": "https://open.spotify.com/album/3KzAvEXcqJKBF97HrXwlgf"
+        "spotify": "https://open.spotify.com/album/6KNyUK5Vc7sbAEoSoAIH5F"
       },
-      "href": "https://api.spotify.com/v1/albums/3KzAvEXcqJKBF97HrXwlgf",
-      "id": "3KzAvEXcqJKBF97HrXwlgf",
+      "href": "https://api.spotify.com/v1/albums/6KNyUK5Vc7sbAEoSoAIH5F",
+      "id": "6KNyUK5Vc7sbAEoSoAIH5F",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273dbeec63ad914c973e75c24df",
+          "url": "https://i.scdn.co/image/ab67616d0000b273a2b3abe7e66ccbb8c3474b63",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02dbeec63ad914c973e75c24df",
+          "url": "https://i.scdn.co/image/ab67616d00001e02a2b3abe7e66ccbb8c3474b63",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851dbeec63ad914c973e75c24df",
+          "url": "https://i.scdn.co/image/ab67616d00004851a2b3abe7e66ccbb8c3474b63",
           "width": 64
         }
       ],
       "is_playable": true,
-      "name": "Please Please Me (Remastered)",
-      "release_date": "1963-03-22",
+      "name": "feel things",
+      "release_date": "2022-11-11",
       "release_date_precision": "day",
-      "total_tracks": 14,
+      "total_tracks": 1,
       "type": "album",
-      "uri": "spotify:album:3KzAvEXcqJKBF97HrXwlgf"
+      "uri": "spotify:album:6KNyUK5Vc7sbAEoSoAIH5F"
     },
     "artists": [
       {
         "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+          "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
         },
-        "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-        "id": "3WrFJ7ztbogyGnTHbHJFl2",
-        "name": "The Beatles",
+        "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+        "id": "1ePVqRHwkjRf7y2XRyHE2p",
+        "name": "Free Arlo",
         "type": "artist",
-        "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+        "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
       }
     ],
     "disc_number": 1,
-    "duration_ms": 155226,
+    "duration_ms": 175000,
     "explicit": false,
     "external_ids": {
-      "isrc": "GBAYE0601423"
+      "isrc": "QM24S2205730"
     },
     "external_urls": {
-      "spotify": "https://open.spotify.com/track/5ZBeML7Lf3FMEVviTyvi8l"
+      "spotify": "https://open.spotify.com/track/6Q7qcQsy7ZrCMxxypSypmE"
     },
-    "href": "https://api.spotify.com/v1/tracks/5ZBeML7Lf3FMEVviTyvi8l",
-    "id": "5ZBeML7Lf3FMEVviTyvi8l",
+    "href": "https://api.spotify.com/v1/tracks/6Q7qcQsy7ZrCMxxypSypmE",
+    "id": "6Q7qcQsy7ZrCMxxypSypmE",
     "is_local": false,
     "is_playable": true,
-    "name": "Twist And Shout - Remastered 2009",
-    "popularity": 77,
-    "preview_url": null,
-    "track_number": 14,
+    "name": "feel things",
+    "popularity": 32,
+    "preview_url": "https://p.scdn.co/mp3-preview/3e2049ba8ab3da2e6f36bd40b192a8d95d40fe7b?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 1,
     "type": "track",
-    "uri": "spotify:track:5ZBeML7Lf3FMEVviTyvi8l"
+    "uri": "spotify:track:6Q7qcQsy7ZrCMxxypSypmE"
+  },
+  {
+    "album": {
+      "album_group": "single",
+      "album_type": "single",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
+          },
+          "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+          "id": "1ePVqRHwkjRf7y2XRyHE2p",
+          "name": "Free Arlo",
+          "type": "artist",
+          "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2wJvOwpVJ309aWlUzzZVIs"
+      },
+      "href": "https://api.spotify.com/v1/albums/2wJvOwpVJ309aWlUzzZVIs",
+      "id": "2wJvOwpVJ309aWlUzzZVIs",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f645a8534ef488668f48907a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f645a8534ef488668f48907a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f645a8534ef488668f48907a",
+          "width": 64
+        }
+      ],
+      "is_playable": true,
+      "name": "summer again",
+      "release_date": "2021-07-02",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "type": "album",
+      "uri": "spotify:album:2wJvOwpVJ309aWlUzzZVIs"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
+        },
+        "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+        "id": "1ePVqRHwkjRf7y2XRyHE2p",
+        "name": "Free Arlo",
+        "type": "artist",
+        "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 164757,
+    "explicit": true,
+    "external_ids": {
+      "isrc": "USLD91732970"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/4JKdZpsEjEvv7qVb12IuH1"
+    },
+    "href": "https://api.spotify.com/v1/tracks/4JKdZpsEjEvv7qVb12IuH1",
+    "id": "4JKdZpsEjEvv7qVb12IuH1",
+    "is_local": false,
+    "is_playable": true,
+    "name": "summer again",
+    "popularity": 28,
+    "preview_url": "https://p.scdn.co/mp3-preview/8f91527c02f718ff8e654bf391fc9365cb9a7cae?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 4,
+    "type": "track",
+    "uri": "spotify:track:4JKdZpsEjEvv7qVb12IuH1"
   }
 ]

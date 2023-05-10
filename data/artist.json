@@ -1,1 +1,33 @@
-{"external_urls": {"spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"}, "followers": {"href": null, "total": 25261982}, "genres": ["beatlesque", "british invasion", "classic rock", "merseybeat", "psychedelic rock", "rock"], "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2", "id": "3WrFJ7ztbogyGnTHbHJFl2", "images": [{"height": 640, "url": "https://i.scdn.co/image/ab6761610000e5ebe9348cc01ff5d55971b22433", "width": 640}, {"height": 320, "url": "https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433", "width": 320}, {"height": 160, "url": "https://i.scdn.co/image/ab6761610000f178e9348cc01ff5d55971b22433", "width": 160}], "name": "The Beatles", "popularity": 84, "type": "artist", "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"}
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
+  },
+  "followers": {
+    "href": null,
+    "total": 7989
+  },
+  "genres": [],
+  "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+  "id": "1ePVqRHwkjRf7y2XRyHE2p",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/ab6761610000e5ebb3c903a447553c962f87bfa9",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "url": "https://i.scdn.co/image/ab67616100005174b3c903a447553c962f87bfa9",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "url": "https://i.scdn.co/image/ab6761610000f178b3c903a447553c962f87bfa9",
+      "width": 160
+    }
+  ],
+  "name": "Free Arlo",
+  "popularity": 36,
+  "type": "artist",
+  "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
+}
