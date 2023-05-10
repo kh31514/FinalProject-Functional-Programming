@@ -113,7 +113,38 @@ and handle_album album =
     Py.Run.eval ~start:Py.File "\nfrom authorization import *\nhandle_album()"
   in
   ();
-  ()
+  try
+    let album' = Api.Album.get_album () in
+    print_string "Are you referring to ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (Api.Album.get_album_name album');
+    print_string " by ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (Api.Album.get_album_artists album');
+    print_string "? (y/n)\n";
+    match read_line () with
+    | exception End_of_file -> ()
+    | text -> (
+        let y_action () = Api.Album.print_album_info album' in
+        understand_y_n text y_action (not_album album);
+        print_endline
+          "Would you like to search for a different song, artist, or album? \
+           (y/n)";
+        match read_line () with
+        | exception End_of_file -> ()
+        | text' ->
+            let y_action' () =
+              print_endline "Please enter another song, artist, or album.";
+              parse ()
+            in
+            understand_y_n text' y_action' print_closing)
+  with Api.Album.UnknownAlbum _ ->
+    print_string "Couldn't identify album ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (open_in "data/user_input.txt" |> input_line);
+    print_string "\n";
+    print_endline "Please enter a different song, artist, or album";
+    parse ()
 
 and parse () =
   match read_line () with
@@ -155,6 +186,20 @@ and not_artist artist () =
   print_endline ("Sorry we couldn't find " ^ artist ^ ".");
   print_endline "Please enter a different song, artist, or album.";
   parse ()
+
+and not_album album () =
+  let ask_for_artist a =
+    print_string "What artist produced ";
+    ANSITerminal.print_string [ ANSITerminal.green ] a;
+    print_string "?\n";
+    match read_line () with
+    | exception End_of_file -> ()
+    | artist -> handle_album (a ^ "\n" ^ artist)
+  in
+  try
+    let ind = String.index album '\n' in
+    ask_for_artist (String.sub album 0 ind)
+  with Not_found -> ask_for_artist album
 
 let main () =
   ANSITerminal.print_string [ ANSITerminal.green ]

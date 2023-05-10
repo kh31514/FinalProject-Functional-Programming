@@ -24,5 +24,9 @@ val image_of_json : Yojson.Basic.t -> image
     [j] is a valid image json *)
 
 val get_artist : unit -> artist
+(** reads data/artist.json and returns the corresponding artist*)
+
 val get_artist_name : artist -> string
+(** [get_artist_name t] returns the name of artist t*)
+
 val print_artist_info : artist -> unit

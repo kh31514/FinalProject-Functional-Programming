@@ -22,6 +22,9 @@ val get_album : unit -> album
 val get_album_name : album -> string
 (** [get_album_name t] returns the name of album t *)
 
+val get_album_artists : album -> string
+(** [get_album_artist t] returns the artist of album t *)
+
 val print_album_info : album -> unit
 (** [print_album_info t] will print information about album t to the terminal.
     For example, if [t] represents the json of the album "Rumors",

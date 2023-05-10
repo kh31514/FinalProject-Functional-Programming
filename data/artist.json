@@ -1,1 +1,33 @@
-{"external_urls": {"spotify": "https://open.spotify.com/artist/2DlGxzQSjYe5N6G9nkYghR"}, "followers": {"href": null, "total": 12344805}, "genres": ["dance pop", "pop", "urban contemporary"], "href": "https://api.spotify.com/v1/artists/2DlGxzQSjYe5N6G9nkYghR", "id": "2DlGxzQSjYe5N6G9nkYghR", "images": [{"height": 640, "url": "https://i.scdn.co/image/ab6761610000e5ebce391c85fb87d67d316d1413", "width": 640}, {"height": 320, "url": "https://i.scdn.co/image/ab67616100005174ce391c85fb87d67d316d1413", "width": 320}, {"height": 160, "url": "https://i.scdn.co/image/ab6761610000f178ce391c85fb87d67d316d1413", "width": 160}], "name": "Jennifer Lopez", "popularity": 76, "type": "artist", "uri": "spotify:artist:2DlGxzQSjYe5N6G9nkYghR"}
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/1ePVqRHwkjRf7y2XRyHE2p"
+  },
+  "followers": {
+    "href": null,
+    "total": 7989
+  },
+  "genres": [],
+  "href": "https://api.spotify.com/v1/artists/1ePVqRHwkjRf7y2XRyHE2p",
+  "id": "1ePVqRHwkjRf7y2XRyHE2p",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/ab6761610000e5ebb3c903a447553c962f87bfa9",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "url": "https://i.scdn.co/image/ab67616100005174b3c903a447553c962f87bfa9",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "url": "https://i.scdn.co/image/ab6761610000f178b3c903a447553c962f87bfa9",
+      "width": 160
+    }
+  ],
+  "name": "Free Arlo",
+  "popularity": 36,
+  "type": "artist",
+  "uri": "spotify:artist:1ePVqRHwkjRf7y2XRyHE2p"
+}

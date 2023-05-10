@@ -114,14 +114,16 @@ let track_of_json json =
       disc_number = json |> member "disc_number" |> to_int;
       duration_ms = json |> member "duration_ms" |> to_int;
       explicit = json |> member "explicit" |> to_bool;
-      isrc = json |> member "external_ids" |> member "isrc" |> to_string;
+      isrc =
+        (try json |> member "external_ids" |> member "isrc" |> to_string
+         with _ -> "");
       spotify_link =
         json |> member "external_urls" |> member "spotify" |> to_string;
       href = json |> member "href" |> to_string;
       id = json |> member "id" |> to_string;
       is_local = json |> member "is_local" |> to_bool;
       name = json |> member "name" |> to_string;
-      popularity = json |> member "popularity" |> to_int;
+      popularity = (try json |> member "popularity" |> to_int with _ -> -1);
       preview_url =
         (try json |> member "preview_url" |> to_string with _ -> "");
       track_number = json |> member "track_number" |> to_int;

@@ -58,6 +58,20 @@ def get_top_tracks(token, artist_name):
     json_result = json.loads(result.content)["tracks"]
     return json_result[0:5]
 
+def get_album_id(album_name):
+    with open('data/album.json') as json_file:
+        data = json.load(json_file)
+    return data["id"]
+
+def get_album_tracks(token, album_name):
+    album_name = album_name.replace(" ", "%")
+    id = get_album_id(album_name)
+    url = f"https://api.spotify.com/v1/albums/{id}/tracks"
+    headers = get_auth_header(token)
+    result = get(url, headers=headers)
+    json_result = json.loads(result.content)["items"]
+    return json_result[0:15]
+
 def handle_artist():
     with open('data/user_input.txt') as f:
         artist = f.readlines()  # returns a list
@@ -72,12 +86,15 @@ def handle_artist():
         json.dump(result, f)
     return
 
-handle_artist()
-
-def search_for_album(token, album_name):
+def search_for_album(token, album_name, artist_name):
+    album_name = album_name.replace(" ", "%")
+    artist_name = artist_name.replace(" ", "%")
     url = "https://api.spotify.com/v1/search"
     headers = get_auth_header(token)
-    query = f"?q={album_name}&type=album&limit=1"
+    if artist_name == "":
+        query = f"?q={album_name}&type=album&limit=1"
+    else:
+        query = f"?q=name:{album_name}%20artist:{artist_name}&type=album&limit=1"
 
     query_url = url + query
     result = get(query_url, headers=headers)
@@ -91,13 +108,24 @@ def handle_album():
     with open('data/user_input.txt') as f:
         album = f.readlines()  # returns a list
     # grabs the firts (and only) string in the list and removes the trailing newline character
-    album = album[0].strip()
+    album_name = album[0].strip()
     token = get_token()
-    result = search_for_album(token, album)
+    try:
+        artist = track[1].strip()
+    except:
+        result = search_for_album(token, album_name, "")
+    else:
+        result = search_for_album(token, album_name, artist)
+
     with open("data/album.json", "w") as f:
+        json.dump(result, f)
+
+    result = get_album_tracks(token, album_name)
+    with open("data/album_tracks.json", "w") as f:
         json.dump(result, f)
     return
 
+handle_album()
 
 def search_for_track(token, track_name, artist_name):
     track_name = track_name.replace(" ", "%")
