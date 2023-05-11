@@ -17,7 +17,10 @@ type album = {
   uri : string;
 }
 
-type abbrev_track = { name : string }
+type abbrev_track = {
+  name : string;
+  track_number : int;
+}
 
 open Yojson.Basic.Util
 
@@ -48,7 +51,11 @@ let album_of_json json =
       uri = json |> member "uri" |> to_string;
     }
 
-let abbrev_track_of_json json = { name = json |> member "name" |> to_string }
+let abbrev_track_of_json json =
+  {
+    name = json |> member "name" |> to_string;
+    track_number = json |> member "track_number" |> to_int;
+  }
 
 let get_album () =
   let json = Yojson.Basic.from_file "data/album.json" in
@@ -97,6 +104,18 @@ let get_album_tracks () =
   let json = Yojson.Basic.from_file "data/album_tracks.json" in
   let track_list = json |> to_list |> List.map abbrev_track_of_json in
   track_list
+
+let get_album_track_len () =
+  let track_list = get_album_tracks () in
+  List.length track_list
+
+let track_num_to_name n =
+  let track_list = get_album_tracks () in
+  let rec iterate_tracks list =
+    match list with
+    | h :: t -> if h.track_number = n then h.name else iterate_tracks t
+  in
+  iterate_tracks track_list
 
 let rec album_track_string track_list ind =
   match track_list with

@@ -113,7 +113,38 @@ and handle_album album =
     Py.Run.eval ~start:Py.File "\nfrom authorization import *\nhandle_album()"
   in
   ();
-  ()
+  try
+    let album' = Api.Album.get_album () in
+    print_string "Are you referring to ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (Api.Album.get_album_name album');
+    print_string " by ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (Api.Album.get_album_artists album');
+    print_string "? (y/n)\n";
+    match read_line () with
+    | exception End_of_file -> ()
+    | text -> (
+        let y_action () = Api.Album.print_album_info album' in
+        understand_y_n text (yes_album album') (not_album album);
+        print_endline
+          "Would you like to search for a different song, artist, or album? \
+           (y/n)";
+        match read_line () with
+        | exception End_of_file -> ()
+        | text' ->
+            let y_action' () =
+              print_endline "Please enter another song, artist, or album.";
+              parse ()
+            in
+            understand_y_n text' y_action' print_closing)
+  with Api.Album.UnknownAlbum _ ->
+    print_string "Couldn't identify album ";
+    ANSITerminal.print_string [ ANSITerminal.green ]
+      (open_in "data/user_input.txt" |> input_line);
+    print_string "\n";
+    print_endline "Please enter a different song, artist, or album";
+    parse ()
 
 and parse () =
   match read_line () with
@@ -155,6 +186,71 @@ and not_artist artist () =
   print_endline ("Sorry we couldn't find " ^ artist ^ ".");
   print_endline "Please enter a different song, artist, or album.";
   parse ()
+
+and not_album album () =
+  let ask_for_artist a =
+    print_string "What artist produced ";
+    ANSITerminal.print_string [ ANSITerminal.green ] a;
+    print_string "?\n";
+    match read_line () with
+    | exception End_of_file -> ()
+    | artist -> handle_album (a ^ "\n" ^ artist)
+  in
+  try
+    let ind = String.index album '\n' in
+    ask_for_artist (String.sub album 0 ind)
+  with Not_found -> ask_for_artist album
+
+and yes_album album () =
+  Api.Album.print_album_info album;
+  print_endline "Would you like to learn more about one of these songs? (y/n)";
+  match read_line () with
+  | exception End_of_file -> ()
+  | input ->
+      let y_action () =
+        print_endline "Which one? (please enter track number)";
+        let rec get_track_num n =
+          try
+            let track_num = int_of_string n in
+            if track_num > 0 && track_num <= Api.Album.get_album_track_len ()
+            then track_num
+            else (
+              print_endline
+                ("Track number is outside range [1,"
+                ^ string_of_int (Api.Album.get_album_track_len ())
+                ^ "]. Please enter a different number.");
+              match read_line () with
+              | input -> get_track_num input)
+          with _ -> (
+            print_endline
+              (n
+             ^ " is not a valid number. Please enter a number within the range \
+                [1,"
+              ^ string_of_int (Api.Album.get_album_track_len ())
+              ^ "].");
+            match read_line () with
+            | input -> get_track_num input)
+        in
+        match read_line () with
+        | input ->
+            let track_num = get_track_num input in
+            let track_name = Api.Album.track_num_to_name track_num in
+            handle_song track_name
+      in
+      let n_action () =
+        print_endline
+          "Would you like to search for a different song, artist, or album? \
+           (y/n)";
+        match read_line () with
+        | exception End_of_file -> ()
+        | text' ->
+            let y_action' () =
+              print_endline "Please enter another song, artist, or album.";
+              parse ()
+            in
+            understand_y_n text' y_action' print_closing
+      in
+      understand_y_n input y_action n_action
 
 let main () =
   ANSITerminal.print_string [ ANSITerminal.green ]

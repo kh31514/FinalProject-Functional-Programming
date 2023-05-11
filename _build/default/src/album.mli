@@ -31,3 +31,6 @@ val print_album_info : album -> unit
     [print_track_info t] will print the following: "Here's what I found: Rumors
     was produced by Fleatwood Mac in 1977. Rumors has a total of 11 tracks, some
     of which include." *)
+
+val track_num_to_name : int -> string
+val get_album_track_len : unit -> int
