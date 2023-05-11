@@ -1,9 +1,9 @@
 # dune exec bin/main.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /home/kh31514/cs3110/final-project
+# Workspace root: /Users/henrykoontz/cs3110-final/cs3110-final-project
 # Auto-detected concurrency: 8
-$ /home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_32dafb_output
+$ /Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/9s/041s6tsd72jcdr46p1bfgznw0000gn/T/dune_195f2c_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,77 +13,79 @@ $ /home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_32dafb_ou
 #  ; fdo_target_exe = None
 #  ; build_dir = In_build_dir "default"
 #  ; toplevel_path =
-#      Some External "/home/kh31514/.opam/cs3110-2023sp/lib/toplevel"
-#  ; ocaml_bin = External "/home/kh31514/.opam/cs3110-2023sp/bin"
-#  ; ocaml = Ok External "/home/kh31514/.opam/cs3110-2023sp/bin/ocaml"
-#  ; ocamlc = External "/home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt"
+#      Some External "/Users/henrykoontz/.opam/cs3110-2023sp/lib/toplevel"
+#  ; ocaml_bin = External "/Users/henrykoontz/.opam/cs3110-2023sp/bin"
+#  ; ocaml = Ok External "/Users/henrykoontz/.opam/cs3110-2023sp/bin/ocaml"
+#  ; ocamlc = External "/Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlc.opt"
 #  ; ocamlopt =
-#      Ok External "/home/kh31514/.opam/cs3110-2023sp/bin/ocamlopt.opt"
+#      Ok External "/Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlopt.opt"
 #  ; ocamldep =
-#      Ok External "/home/kh31514/.opam/cs3110-2023sp/bin/ocamldep.opt"
+#      Ok External "/Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamldep.opt"
 #  ; ocamlmklib =
-#      Ok External "/home/kh31514/.opam/cs3110-2023sp/bin/ocamlmklib.opt"
+#      Ok External "/Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/home/kh31514/.opam/cs3110-2023sp/lib"
-#        ; "DUNE_OCAML_STDLIB" : "/home/kh31514/.opam/cs3110-2023sp/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/home/kh31514/cs3110/final-project"
-#        ; "INSIDE_DUNE" : "/home/kh31514/cs3110/final-project/_build/default"
+#        { "DUNE_OCAML_HARDCODED" :
+#            "/Users/henrykoontz/.opam/cs3110-2023sp/lib"
+#        ; "DUNE_OCAML_STDLIB" :
+#            "/Users/henrykoontz/.opam/cs3110-2023sp/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/Users/henrykoontz/cs3110-final/cs3110-final-project"
+#        ; "INSIDE_DUNE" :
+#            "/Users/henrykoontz/cs3110-final/cs3110-final-project/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/home/kh31514/cs3110/final-project/_build/install/default/lib"
+#            "/Users/henrykoontz/cs3110-final/cs3110-final-project/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/home/kh31514/cs3110/final-project/_build/install/default/lib"
+#            "/Users/henrykoontz/cs3110-final/cs3110-final-project/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/home/kh31514/cs3110/final-project/_build/install/default/lib/toplevel"
+#            "/Users/henrykoontz/cs3110-final/cs3110-final-project/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/home/kh31514/.opam/cs3110-2023sp/lib" ]
+#  ; findlib_paths = [ External "/Users/henrykoontz/.opam/cs3110-2023sp/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
 #      ; standard_library_default =
-#          "/home/kh31514/.opam/cs3110-2023sp/lib/ocaml"
-#      ; standard_library = "/home/kh31514/.opam/cs3110-2023sp/lib/ocaml"
+#          "/Users/henrykoontz/.opam/cs3110-2023sp/lib/ocaml"
+#      ; standard_library = "/Users/henrykoontz/.opam/cs3110-2023sp/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
-#      ; c_compiler = "gcc"
+#      ; c_compiler = "cc"
 #      ; ocamlc_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; ocamlopt_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
 #      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
 #      ; native_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
 #      ; native_c_libraries = [ "-lm" ]
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
-#      ; architecture = "amd64"
+#      ; architecture = "arm64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
-#      ; system = "linux"
-#      ; asm = [ "as" ]
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -94,8 +96,8 @@ $ /home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_32dafb_ou
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "x86_64-pc-linux-gnu"
-#      ; target = "x86_64-pc-linux-gnu"
+#      ; host = "aarch64-apple-darwin21.6.0"
+#      ; target = "aarch64-apple-darwin21.6.0"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -115,9 +117,3 @@ $ /home/kh31514/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /tmp/dune_32dafb_ou
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/kh31514/.opam/cs3110-2023sp/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /home/kh31514/.opam/cs3110-2023sp/lib/ANSITerminal -I /home/kh31514/.opam/cs3110-2023sp/lib/pyml -I /home/kh31514/.opam/cs3110-2023sp/lib/seq -I /home/kh31514/.opam/cs3110-2023sp/lib/stdcompat -I /home/kh31514/.opam/cs3110-2023sp/lib/yojson -I src/.api.objs/byte -I src/.api.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
-> File "bin/main.ml", line 128, characters 12-20:
-> 128 |         let y_action () = Api.Album.print_album_info album' in
->                   ^^^^^^^^
-> Warning 26 [unused-var]: unused variable y_action.
-$ (cd _build/default && /home/kh31514/.opam/cs3110-2023sp/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -o bin/main.exe /home/kh31514/.opam/cs3110-2023sp/lib/yojson/yojson.cmxa /home/kh31514/.opam/cs3110-2023sp/lib/ocaml/unix.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/ocaml -I /home/kh31514/.opam/cs3110-2023sp/lib/ocaml /home/kh31514/.opam/cs3110-2023sp/lib/ANSITerminal/ANSITerminal.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/ANSITerminal src/api.cmxa /home/kh31514/.opam/cs3110-2023sp/lib/ocaml/bigarray.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/ocaml /home/kh31514/.opam/cs3110-2023sp/lib/stdcompat/stdcompat.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/stdcompat /home/kh31514/.opam/cs3110-2023sp/lib/pyml/pyml.cmxa -I /home/kh31514/.opam/cs3110-2023sp/lib/pyml bin/.main.eobjs/native/dune__exe__Main.cmx)

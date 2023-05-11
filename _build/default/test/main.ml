@@ -47,7 +47,20 @@ let track_test =
 (*******************************************************************************
   Test suite for functions in album.ml
   *******************************************************************************)
-let album_test = []
+let recovery =
+  let json = Yojson.Basic.from_file "test/test_data/recovery.json" in
+  let album = Api.Album.album_of_json json in
+  album
+
+let album_test =
+  [
+    ( "Album name test" >:: fun _ ->
+      assert_equal "Recovery" (Api.Album.get_album_name recovery) );
+    ( "Album of json test" >:: fun _ ->
+      assert_equal recovery
+        (Api.Album.album_of_json
+           (Yojson.Basic.from_file "test/test_data/recovery.json")) );
+  ]
 
 let suite =
   "test suite for Spoticaml"

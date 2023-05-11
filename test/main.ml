@@ -33,6 +33,14 @@ let hotel =
   let track = Api.Track.track_of_json json in
   track
 
+let hotel_info =
+  "Hotel California - 2013 Remaster was produced by Eagles in 1976.\n\
+   It is not explicit, lasts 6 minutes and 31 seconds, and has a popularity \
+   ranking of 85.\n\
+   It is track number 1 in the album Hotel California (2013 Remaster).\n\
+   Want to listen now? Go to \
+   https://open.spotify.com/album/2widuo17g5CEC66IbzveRu"
+
 let track_test =
   [
     ( "Track name test" >:: fun _ ->
@@ -42,12 +50,31 @@ let track_test =
       assert_equal hotel
         (Api.Track.track_of_json
            (Yojson.Basic.from_file "test/test_data/hotel.json")) );
+    ( "Track artist name test" >:: fun _ ->
+      assert_equal "Eagles" (Api.Track.get_track_artist hotel) )
+    (*("Track artist info test" >:: fun _ -> assert_equal hotel_info
+      (Api.Track.print_track_info hotel));*);
   ]
 
 (*******************************************************************************
   Test suite for functions in album.ml
   *******************************************************************************)
-let album_test = []
+let recovery =
+  let json = Yojson.Basic.from_file "test/test_data/recovery.json" in
+  let album = Api.Album.album_of_json json in
+  album
+
+let album_test =
+  [
+    ( "Album name test" >:: fun _ ->
+      assert_equal "Recovery" (Api.Album.get_album_name recovery) );
+    ( "Album of json test" >:: fun _ ->
+      assert_equal recovery
+        (Api.Album.album_of_json
+           (Yojson.Basic.from_file "test/test_data/recovery.json")) );
+    ( "Get album artist test" >:: fun _ ->
+      assert_equal "Eminem" (Api.Album.get_album_artists recovery) );
+  ]
 
 let suite =
   "test suite for Spoticaml"

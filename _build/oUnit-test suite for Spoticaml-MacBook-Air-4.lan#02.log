@@ -1,6 +1,9 @@
-2023-05-10T15:10:09+00:00 MacBook-Air-4.lan#02 I: Start test test suite for Spoticaml:1:Artist of json test.
-2023-05-10T15:10:09+00:00 MacBook-Air-4.lan#02 I: Test test suite for Spoticaml:1:Artist of json test is successful.
-2023-05-10T15:10:09+00:00 MacBook-Air-4.lan#02 I: End test test suite for Spoticaml:1:Artist of json test.
-2023-05-10T15:10:09+00:00 MacBook-Air-4.lan#02 I: Start test test suite for Spoticaml:3:Track of json test.
-2023-05-10T15:10:09+00:00 MacBook-Air-4.lan#02 I: Test test suite for Spoticaml:3:Track of json test is successful.
-2023-05-10T15:10:09+00:00 MacBook-Air-4.lan#02 I: End test test suite for Spoticaml:3:Track of json test.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: Start test test suite for Spoticaml:1:Album of json test.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: Test test suite for Spoticaml:1:Album of json test is successful.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: End test test suite for Spoticaml:1:Album of json test.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: Start test test suite for Spoticaml:3:Artist of json test.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: Test test suite for Spoticaml:3:Artist of json test is successful.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: End test test suite for Spoticaml:3:Artist of json test.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: Start test test suite for Spoticaml:5:Track of json test.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: Test test suite for Spoticaml:5:Track of json test is successful.
+2023-05-11T18:46:32+00:00 MacBook-Air-4.lan#02 I: End test test suite for Spoticaml:5:Track of json test.
