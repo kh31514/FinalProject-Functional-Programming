@@ -82,7 +82,7 @@ let abbrev_artist_of_json json =
    Requires: [j] is a valid JSON abbreviated album representation. *)
 let abbrev_album_of_json json =
   {
-    album_group = json |> member "album_group" |> to_string;
+    album_group = (try json |> member "album_group" |> to_string with _ -> "");
     album_type = json |> member "album_type" |> to_string;
     artists =
       json |> member "artists" |> to_list |> List.map abbrev_artist_of_json;

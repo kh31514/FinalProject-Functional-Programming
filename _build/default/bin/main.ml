@@ -125,7 +125,6 @@ and handle_album album =
     match read_line () with
     | exception End_of_file -> ()
     | text -> (
-        let y_action () = Api.Album.print_album_info album' in
         understand_y_n text (yes_album album') (not_album album);
         print_endline
           "Would you like to search for a different song, artist, or album? \
@@ -160,7 +159,7 @@ and parse () =
         | "artist" -> handle_artist text
         | "album" -> handle_album text
         | weird_input ->
-            print_string "Can't deciper ";
+            print_string "Can't understand ";
             ANSITerminal.print_string [ ANSITerminal.green ] weird_input;
             print_string ".\n";
             print_endline "Please enter \"song,\" \"artist,\" or \"album.\"";

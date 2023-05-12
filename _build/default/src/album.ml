@@ -114,6 +114,7 @@ let track_num_to_name n =
   let rec iterate_tracks list =
     match list with
     | h :: t -> if h.track_number = n then h.name else iterate_tracks t
+    | [] -> "track number not found?"
   in
   iterate_tracks track_list
 
