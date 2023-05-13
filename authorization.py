@@ -70,7 +70,11 @@ def get_album_tracks(token, album_name):
     headers = get_auth_header(token)
     result = get(url, headers=headers)
     json_result = json.loads(result.content)["items"]
-    return json_result[0:15]
+    disc_one = [
+    dictionary for dictionary in json_result
+    if dictionary['disc_number'] == 1
+    ]
+    return disc_one[0:15]
 
 def handle_artist():
     with open('data/user_input.txt') as f:
@@ -124,8 +128,6 @@ def handle_album():
     with open("data/album_tracks.json", "w") as f:
         json.dump(result, f)
     return
-
-handle_album()
 
 def search_for_track(token, track_name, artist_name):
     track_name = track_name.replace(" ", "%")
