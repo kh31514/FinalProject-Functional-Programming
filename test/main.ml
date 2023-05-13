@@ -29,7 +29,7 @@ let artist_test =
          \t2. Come Together - Remastered 2009\n\
          \t3. Let It Be - Remastered 2009\n\
          \t4. Yesterday - Remastered 2009\n\
-         \t5. Twist And Shout - Remastered 2009"
+         \t5. Twist And Shout - Remastered 2009\n"
         (Api.Artist.top_track_string beatles_top_track 1) );
   ]
 
