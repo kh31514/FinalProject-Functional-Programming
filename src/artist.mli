@@ -29,4 +29,5 @@ val get_artist : unit -> artist
 val get_artist_name : artist -> string
 (** [get_artist_name t] returns the name of artist t*)
 
+val top_track_string : Track.track list -> int -> string
 val print_artist_info : artist -> unit

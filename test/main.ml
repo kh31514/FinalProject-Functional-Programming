@@ -10,7 +10,7 @@ let beatles =
   let artist = Api.Artist.artist_of_json json in
   artist
 
-let beatles_top_track () : Track.track list =
+let beatles_top_track =
   let json = Yojson.Basic.from_file "test/test_data/beatles_top_track.json" in
   let top_tracks = json |> to_list |> List.map Track.track_of_json in
   top_tracks
@@ -23,6 +23,14 @@ let artist_test =
       assert_equal beatles
         (Api.Artist.artist_of_json
            (Yojson.Basic.from_file "test/test_data/beatles.json")) );
+    ( "Artist top track list" >:: fun _ ->
+      assert_equal
+        "\t1. Here Comes The Sun - Remastered 2009\n\
+         \t2. Come Together - Remastered 2009\n\
+         \t3. Let It Be - Remastered 2009\n\
+         \t4. Yesterday - Remastered 2009\n\
+         \t5. Twist And Shout - Remastered 2009"
+        (Api.Artist.top_track_string beatles_top_track 1) );
   ]
 
 (*******************************************************************************
@@ -64,6 +72,11 @@ let recovery =
   let album = Api.Album.album_of_json json in
   album
 
+let recovery_list =
+  let json = Yojson.Basic.from_file "test/test_data/recovery_tracks.json" in
+  let track_list = json |> to_list |> List.map Api.Album.abbrev_track_of_json in
+  track_list
+
 let album_test =
   [
     ( "Album name test" >:: fun _ ->
@@ -74,6 +87,21 @@ let album_test =
            (Yojson.Basic.from_file "test/test_data/recovery.json")) );
     ( "Get album artist test" >:: fun _ ->
       assert_equal "Eminem" (Api.Album.get_album_artists recovery) );
+    ( "Track number to name 1 test" >:: fun _ ->
+      assert_equal "Cold Wind Blows"
+        (Api.Album.track_num_to_name 1 recovery_list) );
+    ( "Track number to name last number test" >:: fun _ ->
+      assert_equal "Love The Way You Lie"
+        (Api.Album.track_num_to_name 15 recovery_list) );
+    ( "Track number to name out of bounds test" >:: fun _ ->
+      assert_equal "track number not found?"
+        (Api.Album.track_num_to_name 17 recovery_list) );
+    ( "Track number to name zero test" >:: fun _ ->
+      assert_equal "track number not found?"
+        (Api.Album.track_num_to_name 0 recovery_list) );
+    ( "Track number to name negative test" >:: fun _ ->
+      assert_equal "track number not found?"
+        (Api.Album.track_num_to_name (-1) recovery_list) );
   ]
 
 let suite =

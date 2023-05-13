@@ -1,7 +1,6 @@
 [
   {
     "album": {
-      "album_group": "album",
       "album_type": "album",
       "artists": [
         {
@@ -79,7 +78,6 @@
   },
   {
     "album": {
-      "album_group": "album",
       "album_type": "album",
       "artists": [
         {
@@ -157,7 +155,6 @@
   },
   {
     "album": {
-      "album_group": "album",
       "album_type": "album",
       "artists": [
         {
@@ -235,7 +232,6 @@
   },
   {
     "album": {
-      "album_group": "album",
       "album_type": "album",
       "artists": [
         {
@@ -313,7 +309,6 @@
   },
   {
     "album": {
-      "album_group": "album",
       "album_type": "album",
       "artists": [
         {

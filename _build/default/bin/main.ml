@@ -233,7 +233,10 @@ and yes_album album () =
         match read_line () with
         | input ->
             let track_num = get_track_num input in
-            let track_name = Api.Album.track_num_to_name track_num in
+            let track_name =
+              Api.Album.track_num_to_name track_num
+                (Api.Album.get_album_tracks ())
+            in
             handle_song track_name
       in
       let n_action () =

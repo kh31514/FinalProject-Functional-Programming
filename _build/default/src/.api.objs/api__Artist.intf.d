@@ -1,1 +1,1 @@
-src/artist.mli: Yojson
+src/artist.mli: Track Yojson

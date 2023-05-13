@@ -10,6 +10,7 @@ exception UnknownAlbum of string
 
 type album
 (** The abstract type of values representing Spotify artists. *)
+type abbrev_track
 
 val album_of_json : Yojson.Basic.t -> album
 (** [track_of_json j] is the Spotify artist that [j] represents. Raises
@@ -32,5 +33,7 @@ val print_album_info : album -> unit
     was produced by Fleatwood Mac in 1977. Rumors has a total of 11 tracks, some
     of which include." *)
 
-val track_num_to_name : int -> string
+val track_num_to_name : int -> abbrev_track list -> string
 val get_album_track_len : unit -> int
+val get_album_tracks : unit -> abbrev_track list 
+val abbrev_track_of_json : Yojson.Basic.t -> abbrev_track

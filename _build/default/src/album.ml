@@ -109,8 +109,8 @@ let get_album_track_len () =
   let track_list = get_album_tracks () in
   List.length track_list
 
-let track_num_to_name n =
-  let track_list = get_album_tracks () in
+let track_num_to_name n list =
+  let track_list = list in
   let rec iterate_tracks list =
     match list with
     | h :: t -> if h.track_number = n then h.name else iterate_tracks t
