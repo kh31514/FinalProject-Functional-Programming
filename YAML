@@ -20,8 +20,5 @@ demo-video-url: ""
 # Write a short, attention-grabbing description of your project.
 desc: >
   Our project integrates the Spotify API with OCaml to give users personalized 
-  music experience. Users can interact with the terminal interface to learn
-  more about a given song, artist, or album. To list all 
-  possible commands, type "help." Our end goal is to help users identify new
-  songs, artists, or albums that match their individualized taste in music, and
-  seamlessly learn more about the music they do enjoy.
+  music experience. Our project features a simple, intuitive terminal interface
+  to help users seamlessly learn more about the music they enjoy.
