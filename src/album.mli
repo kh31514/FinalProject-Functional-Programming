@@ -34,6 +34,6 @@ val print_album_info : album -> unit
     of which include." *)
 
 val track_num_to_name : int -> abbrev_track list -> string
-val get_album_track_len : unit -> int
+val get_album_track_len : abbrev_track list -> int
 val get_album_tracks : unit -> abbrev_track list 
 val abbrev_track_of_json : Yojson.Basic.t -> abbrev_track

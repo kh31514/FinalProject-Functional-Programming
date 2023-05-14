@@ -1,0 +1,387 @@
+[
+  {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+          },
+          "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha",
+          "type": "artist",
+          "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/6fpLLJsDSSAlToEDW2jv4F"
+      },
+      "href": "https://api.spotify.com/v1/albums/6fpLLJsDSSAlToEDW2jv4F",
+      "id": "6fpLLJsDSSAlToEDW2jv4F",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2737a6339d6ddfd579f77559b3c",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e027a6339d6ddfd579f77559b3c",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048517a6339d6ddfd579f77559b3c",
+          "width": 64
+        }
+      ],
+      "is_playable": true,
+      "name": "Animal (Expanded Edition)",
+      "release_date": "2010-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 18,
+      "type": "album",
+      "uri": "spotify:album:6fpLLJsDSSAlToEDW2jv4F"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+        },
+        "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+        "id": "6LqNN22kT3074XbTVUrhzX",
+        "name": "Kesha",
+        "type": "artist",
+        "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 199693,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "USRC10900433"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/0HPD5WQqrq7wPWR7P7Dw1i"
+    },
+    "href": "https://api.spotify.com/v1/tracks/0HPD5WQqrq7wPWR7P7Dw1i",
+    "id": "0HPD5WQqrq7wPWR7P7Dw1i",
+    "is_local": false,
+    "is_playable": true,
+    "name": "TiK ToK",
+    "popularity": 83,
+    "preview_url": "https://p.scdn.co/mp3-preview/ea95bec21bd6c4979cc91f5d5528b533d879905c?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 2,
+    "type": "track",
+    "uri": "spotify:track:0HPD5WQqrq7wPWR7P7Dw1i"
+  },
+  {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+          },
+          "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha",
+          "type": "artist",
+          "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5ZQB1ZQ2Yx9YT3nZlR2Pgu"
+      },
+      "href": "https://api.spotify.com/v1/albums/5ZQB1ZQ2Yx9YT3nZlR2Pgu",
+      "id": "5ZQB1ZQ2Yx9YT3nZlR2Pgu",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27376c5c62197115a22b23ff950",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0276c5c62197115a22b23ff950",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485176c5c62197115a22b23ff950",
+          "width": 64
+        }
+      ],
+      "is_playable": true,
+      "name": "Warrior (Expanded Edition)",
+      "release_date": "2012-11-30",
+      "release_date_precision": "day",
+      "total_tracks": 24,
+      "type": "album",
+      "uri": "spotify:album:5ZQB1ZQ2Yx9YT3nZlR2Pgu"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+        },
+        "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+        "id": "6LqNN22kT3074XbTVUrhzX",
+        "name": "Kesha",
+        "type": "artist",
+        "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 211920,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "USRC11201008"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/7EQGXaVSyEDsCWKmUcfpLk"
+    },
+    "href": "https://api.spotify.com/v1/tracks/7EQGXaVSyEDsCWKmUcfpLk",
+    "id": "7EQGXaVSyEDsCWKmUcfpLk",
+    "is_local": false,
+    "is_playable": true,
+    "name": "Die Young",
+    "popularity": 79,
+    "preview_url": "https://p.scdn.co/mp3-preview/237e17c6319aa02a1fde3ebcd89c5e5e3e03dbf8?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 2,
+    "type": "track",
+    "uri": "spotify:track:7EQGXaVSyEDsCWKmUcfpLk"
+  },
+  {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+          },
+          "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha",
+          "type": "artist",
+          "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/6fpLLJsDSSAlToEDW2jv4F"
+      },
+      "href": "https://api.spotify.com/v1/albums/6fpLLJsDSSAlToEDW2jv4F",
+      "id": "6fpLLJsDSSAlToEDW2jv4F",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2737a6339d6ddfd579f77559b3c",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e027a6339d6ddfd579f77559b3c",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048517a6339d6ddfd579f77559b3c",
+          "width": 64
+        }
+      ],
+      "is_playable": true,
+      "name": "Animal (Expanded Edition)",
+      "release_date": "2010-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 18,
+      "type": "album",
+      "uri": "spotify:album:6fpLLJsDSSAlToEDW2jv4F"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+        },
+        "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+        "id": "6LqNN22kT3074XbTVUrhzX",
+        "name": "Kesha",
+        "type": "artist",
+        "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 186840,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "USRC10900741"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/4GRFzKI7jTZ3kbMfouc7bn"
+    },
+    "href": "https://api.spotify.com/v1/tracks/4GRFzKI7jTZ3kbMfouc7bn",
+    "id": "4GRFzKI7jTZ3kbMfouc7bn",
+    "is_local": false,
+    "is_playable": true,
+    "name": "Backstabber",
+    "popularity": 75,
+    "preview_url": "https://p.scdn.co/mp3-preview/a39d34af33e5da5fa3f6e6956bc179f725c3ee4b?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 9,
+    "type": "track",
+    "uri": "spotify:track:4GRFzKI7jTZ3kbMfouc7bn"
+  },
+  {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+          },
+          "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha",
+          "type": "artist",
+          "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0pGumY11G8OGH05ti6jh23"
+      },
+      "href": "https://api.spotify.com/v1/albums/0pGumY11G8OGH05ti6jh23",
+      "id": "0pGumY11G8OGH05ti6jh23",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2733556ff5e46e50eb27be71ebe",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e023556ff5e46e50eb27be71ebe",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048513556ff5e46e50eb27be71ebe",
+          "width": 64
+        }
+      ],
+      "is_playable": true,
+      "name": "Cannibal (Expanded Edition)",
+      "release_date": "2010-11-19",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "type": "album",
+      "uri": "spotify:album:0pGumY11G8OGH05ti6jh23"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+        },
+        "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+        "id": "6LqNN22kT3074XbTVUrhzX",
+        "name": "Kesha",
+        "type": "artist",
+        "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 204760,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "USRC11000862"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/3LUWWox8YYykohBbHUrrxd"
+    },
+    "href": "https://api.spotify.com/v1/tracks/3LUWWox8YYykohBbHUrrxd",
+    "id": "3LUWWox8YYykohBbHUrrxd",
+    "is_local": false,
+    "is_playable": true,
+    "name": "We R Who We R",
+    "popularity": 73,
+    "preview_url": "https://p.scdn.co/mp3-preview/87e275c268cbc6f76b509f4dd237bcea41d92059?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 2,
+    "type": "track",
+    "uri": "spotify:track:3LUWWox8YYykohBbHUrrxd"
+  },
+  {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+          },
+          "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha",
+          "type": "artist",
+          "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1IYVB8NfiRqhdZlTxjspNh"
+      },
+      "href": "https://api.spotify.com/v1/albums/1IYVB8NfiRqhdZlTxjspNh",
+      "id": "1IYVB8NfiRqhdZlTxjspNh",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27355de63b8aaf464fe8146b4f1",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0255de63b8aaf464fe8146b4f1",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485155de63b8aaf464fe8146b4f1",
+          "width": 64
+        }
+      ],
+      "is_playable": true,
+      "name": "Rainbow",
+      "release_date": "2017-08-11",
+      "release_date_precision": "day",
+      "total_tracks": 14,
+      "type": "album",
+      "uri": "spotify:album:1IYVB8NfiRqhdZlTxjspNh"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+        },
+        "href": "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+        "id": "6LqNN22kT3074XbTVUrhzX",
+        "name": "Kesha",
+        "type": "artist",
+        "uri": "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 230266,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "USRC11701134"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/0jdny0dhgjUwoIp5GkqEaA"
+    },
+    "href": "https://api.spotify.com/v1/tracks/0jdny0dhgjUwoIp5GkqEaA",
+    "id": "0jdny0dhgjUwoIp5GkqEaA",
+    "is_local": false,
+    "is_playable": true,
+    "name": "Praying",
+    "popularity": 71,
+    "preview_url": "https://p.scdn.co/mp3-preview/a07409c290a938a1be85901d4579d0a3095b51c1?cid=76af978f82c3430bb2fe9661b6147767",
+    "track_number": 5,
+    "type": "track",
+    "uri": "spotify:track:0jdny0dhgjUwoIp5GkqEaA"
+  }
+]

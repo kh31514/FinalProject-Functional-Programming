@@ -211,12 +211,18 @@ and yes_album album () =
         let rec get_track_num n =
           try
             let track_num = int_of_string n in
-            if track_num > 0 && track_num <= Api.Album.get_album_track_len ()
+            if
+              track_num > 0
+              && track_num
+                 <= Api.Album.get_album_track_len
+                      (Api.Album.get_album_tracks ())
             then track_num
             else (
               print_endline
                 ("Track number is outside range [1,"
-                ^ string_of_int (Api.Album.get_album_track_len ())
+                ^ string_of_int
+                    (Api.Album.get_album_track_len
+                       (Api.Album.get_album_tracks ()))
                 ^ "]. Please enter a different number.");
               match read_line () with
               | input -> get_track_num input)
@@ -225,7 +231,9 @@ and yes_album album () =
               (n
              ^ " is not a valid number. Please enter a number within the range \
                 [1,"
-              ^ string_of_int (Api.Album.get_album_track_len ())
+              ^ string_of_int
+                  (Api.Album.get_album_track_len
+                     (Api.Album.get_album_tracks ()))
               ^ "].");
             match read_line () with
             | input -> get_track_num input)

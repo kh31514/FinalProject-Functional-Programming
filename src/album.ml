@@ -105,8 +105,8 @@ let get_album_tracks () =
   let track_list = json |> to_list |> List.map abbrev_track_of_json in
   track_list
 
-let get_album_track_len () =
-  let track_list = get_album_tracks () in
+let get_album_track_len (tlist : abbrev_track list) =
+  let track_list = tlist in
   List.length track_list
 
 let track_num_to_name n list =
