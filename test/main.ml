@@ -7,24 +7,27 @@ open Yojson.Basic.Util
   API. This is to ensure we are accurately able to pull information from the
   files and that the files contain all of the information that we require. We
   also Needed to ensure uniformity across the files we receive from the API so
-  each function tested is tested against multiple Json files. Black box testing
-  was used in order to create many of the tests. In order to do so we took
-  multiple json files created by the spotify API and plugged them directly into
-  the functions used in the src file, matching them against the what the output
-  should be according to the mli. Much of the functionality of this code exists
-  in the bin/Main.ml file. This is an executable file and we are therefore
-  unable to test what is in this file This file does, however mostly deal with
-  the user interface portion of the code, and therefore was better suited to be
-  tested mannually. This was done by running the program several times accross
-  several inputs. This was also necessary for a few of the functions in the src
-  file. The src and the bin files were heavily interwoven, and some functions in
-  the src file could not be tested consistently by a test suite. There functions
-  were therefore also tested manually We believe the test suite demonstrates the
-  system is able to reliably parse information from json files given back from
-  spotify API. As this is the main function of the program, to serve as a
-  go-between for the used and the API. Users will accurately receive informaiton
-  back from the API due to the functions that have been thuroughly tested in
-  this suite*)
+  each function tested is tested against multiple Json files. Songs have a lot
+  of variation when it comes to the type of producer, whether it be a band,
+  single artist, or colaboration. This variation spreads across individual
+  artists and albums, so we needed to test all of these different types of media
+  in the unit test. Black box testing was used in order to create many of the
+  tests. In order to do so we took multiple json files created by the spotify
+  API and plugged them directly into the functions used in the src file,
+  matching them against the what the output should be according to the mli. Much
+  of the functionality of this code exists in the bin/Main.ml file. This is an
+  executable file and we are therefore unable to test what is in this file This
+  file does, however mostly deal with the user interface portion of the code,
+  and therefore was better suited to be tested mannually. This was done by
+  running the program several times accross several inputs. This was also
+  necessary for a few of the functions in the src file. The src and the bin
+  files were heavily interwoven, and some functions in the src file could not be
+  tested consistently by a test suite. There functions were therefore also
+  tested manually We believe the test suite demonstrates the system is able to
+  reliably parse information from json files given back from spotify API. As
+  this is the main function of the program, to serve as a go-between for the
+  used and the API. Users will accurately receive informaiton back from the API
+  due to the functions that have been thuroughly tested in this suite*)
 exception UnknownSong of string
 
 (*******************************************************************************
@@ -119,6 +122,16 @@ let wmggw =
   let track = Api.Track.track_of_json json in
   track
 
+let careless =
+  let json = Yojson.Basic.from_file "test/test_data/careless.json" in
+  let track = Api.Track.track_of_json json in
+  track
+
+let white =
+  let json = Yojson.Basic.from_file "test/test_data/white.json" in
+  let track = Api.Track.track_of_json json in
+  track
+
 let track_test =
   [
     ( "Track name test" >:: fun _ ->
@@ -141,6 +154,24 @@ let track_test =
       assert_equal
         "Tom Petty, Jeff Lynne, Steve Winwood, Dhani Harrison and Prince"
         (Api.Track.get_track_artist wmggw) );
+    ( "Track name careless test" >:: fun _ ->
+      assert_equal "Careless Whisper" (Api.Track.get_track_name careless) );
+    ( "Track of json test careless" >:: fun _ ->
+      assert_equal careless
+        (Api.Track.track_of_json
+           (Yojson.Basic.from_file "test/test_data/careless.json")) );
+    ( "Track artist one singer name test" >:: fun _ ->
+      assert_equal "George Michael" (Api.Track.get_track_artist careless) );
+    ( "Track name white christmas test" >:: fun _ ->
+      assert_equal "White Christmas" (Api.Track.get_track_name white) );
+    ( "Track of json test white christmas single" >:: fun _ ->
+      assert_equal white
+        (Api.Track.track_of_json
+           (Yojson.Basic.from_file "test/test_data/white.json")) );
+    ( "Track artist many artists name on single test" >:: fun _ ->
+      assert_equal
+        "Bing Crosby, Ken Darby Singers and John Scott Trotter & His Orchestra"
+        (Api.Track.get_track_artist white) );
   ]
 
 (*******************************************************************************
@@ -173,6 +204,16 @@ let wtt =
 
 let wtt_list =
   let json = Yojson.Basic.from_file "test/test_data/WTT_tracks.json" in
+  let track_list = json |> to_list |> List.map Api.Album.abbrev_track_of_json in
+  track_list
+
+let harder =
+  let json = Yojson.Basic.from_file "test/test_data/htc.json" in
+  let album = Api.Album.album_of_json json in
+  album
+
+let harder_list =
+  let json = Yojson.Basic.from_file "test/test_data/htc_tracks.json" in
   let track_list = json |> to_list |> List.map Api.Album.abbrev_track_of_json in
   track_list
 
@@ -233,7 +274,7 @@ let album_test =
     ( "Album of json wtt test" >:: fun _ ->
       assert_equal wtt
         (Api.Album.album_of_json
-           (Yojson.Basic.from_file "test/test_data/recovery.json")) );
+           (Yojson.Basic.from_file "test/test_data/WTT.json")) );
     ( "Get album artist mult artist test" >:: fun _ ->
       assert_equal "JAY-Z and Kanye West" (Api.Album.get_album_artists wtt) );
     ( "Track number to name 1 test" >:: fun _ ->
@@ -243,6 +284,21 @@ let album_test =
       assert_equal "Primetime" (Api.Album.track_num_to_name 15 wtt_list) );
     ( "Track number to name strange name test" >:: fun _ ->
       assert_equal "H•A•M" (Api.Album.track_num_to_name 14 wtt_list) );
+    ( "Album name test harder" >:: fun _ ->
+      assert_equal "The Harder They Come (Original Motion Picture Soundtrack)"
+        (Api.Album.get_album_name harder) );
+    ( "Album of json test" >:: fun _ ->
+      assert_equal harder
+        (Api.Album.album_of_json
+           (Yojson.Basic.from_file "test/test_data/htc.json")) );
+    ( "Get album artist test" >:: fun _ ->
+      assert_equal "Jimmy Cliff" (Api.Album.get_album_artists harder) );
+    ( "Track number to name 1 test" >:: fun _ ->
+      assert_equal "You Can Get It If You Really Want"
+        (Api.Album.track_num_to_name 1 harder_list) );
+    ( "Track number to name shorter track out of bounds test" >:: fun _ ->
+      assert_equal "track number not found?"
+        (Api.Album.track_num_to_name 13 harder_list) );
   ]
 
 let suite =

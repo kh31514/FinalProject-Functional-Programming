@@ -1,57 +1,72 @@
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:1:Album of json test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:1:Album of json test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:1:Album of json test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:3:Track number to name 1 test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:3:Track number to name 1 test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:3:Track number to name 1 test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:6:Track number to name zero test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:6:Track number to name zero test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:6:Track number to name zero test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:8:Album name test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:8:Album name test 2 is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:8:Album name test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:10:Get album artist 2 test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:10:Get album artist 2 test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:10:Get album artist 2 test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:11:Track number to name 1 test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:11:Track number to name 1 test 2 is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:11:Track number to name 1 test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:13:Track number to name out of bounds test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:13:Track number to name out of bounds test 2 is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:13:Track number to name out of bounds test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:15:Track number to name negative test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:15:Track number to name negative test 2 is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:15:Track number to name negative test 2.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:18:Album long name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:18:Album long name test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:18:Album long name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:21:Track number to name 1 test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:21:Track number to name 1 test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:21:Track number to name 1 test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:23:Track number to name strange name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:23:Track number to name strange name test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:23:Track number to name strange name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:25:Artist of json test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:25:Artist of json test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:25:Artist of json test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:27:Artist Name 2pac test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:27:Artist Name 2pac test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:27:Artist Name 2pac test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:29:Artist top track list 2pac.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:29:Artist top track list 2pac is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:29:Artist top track list 2pac.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:31:Artist of json test kesha.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:31:Artist of json test kesha is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:31:Artist of json test kesha.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:33:Track name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:33:Track name test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:33:Track name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:35:Track artist name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:35:Track artist name test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:35:Track artist name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:37:Obscure track of json test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:37:Obscure track of json test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:37:Obscure track of json test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:38:Track artist many name test.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:38:Track artist many name test is successful.
-2023-05-14T13:18:56+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:38:Track artist many name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:1:Album of json test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:1:Album of json test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:1:Album of json test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:3:Track number to name 1 test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:3:Track number to name 1 test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:3:Track number to name 1 test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:5:Track number to name out of bounds test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:5:Track number to name out of bounds test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:5:Track number to name out of bounds test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:8:Album name test 2.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:8:Album name test 2 is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:8:Album name test 2.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:10:Get album artist 2 test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:10:Get album artist 2 test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:10:Get album artist 2 test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:12:Track number to name last number test 2.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:12:Track number to name last number test 2 is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:12:Track number to name last number test 2.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:14:Track number to name zero test 2.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:14:Track number to name zero test 2 is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:14:Track number to name zero test 2.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:16:Abbrev track of json recovery test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:16:Abbrev track of json recovery test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:16:Abbrev track of json recovery test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:18:Album long name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:18:Album long name test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:18:Album long name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:20:Get album artist mult artist test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:20:Get album artist mult artist test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:20:Get album artist mult artist test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:22:Track number to name last number test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:22:Track number to name last number test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:22:Track number to name last number test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:24:Album name test harder.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:24:Album name test harder is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:24:Album name test harder.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:26:Get album artist test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:26:Get album artist test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:26:Get album artist test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:28:Track number to name shorter track out of bounds test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:28:Track number to name shorter track out of bounds test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:28:Track number to name shorter track out of bounds test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:30:Artist of json test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:30:Artist of json test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:30:Artist of json test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:32:Artist Name 2pac test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:32:Artist Name 2pac test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:32:Artist Name 2pac test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:34:Artist top track list 2pac.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:34:Artist top track list 2pac is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:34:Artist top track list 2pac.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:36:Artist of json test kesha.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:36:Artist of json test kesha is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:36:Artist of json test kesha.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:38:Track name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:38:Track name test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:38:Track name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:40:Track artist name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:40:Track artist name test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:40:Track artist name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:42:Obscure track of json test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:42:Obscure track of json test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:42:Obscure track of json test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:44:Track name careless test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:44:Track name careless test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:44:Track name careless test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:46:Track artist one singer name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:46:Track artist one singer name test is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:46:Track artist one singer name test.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:48:Track of json test white christmas single.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:48:Track of json test white christmas single is successful.
+2023-05-14T17:21:33+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:48:Track of json test white christmas single.
