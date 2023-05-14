@@ -307,5 +307,4 @@ let suite =
   "test suite for Spoticaml"
   >::: List.flatten [ album_test; artist_test; track_test ]
 
-let _ = print_endline (Api.Album.track_num_to_name 15 rumors_list)
 let _ = run_test_tt_main suite
