@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/henrykoontz/cs3110-final/cs3110-final-project
 # Auto-detected concurrency: 8
-$ /Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/9s/041s6tsd72jcdr46p1bfgznw0000gn/T/dune_9a33ab_output
+$ /Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/9s/041s6tsd72jcdr46p1bfgznw0000gn/T/dune_68f803_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -117,3 +117,5 @@ $ /Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/9
 #      ; windows_unicode = false
 #      }
 #  }
+$ (cd _build/default && /Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/ANSITerminal -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/ounit2 -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/ounit2/advanced -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/seq -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/stdlib-shims -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/yojson -I src/.api.objs/byte -I src/.api.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+$ (cd _build/default && /Users/henrykoontz/.opam/cs3110-2023sp/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -o test/main.exe /Users/henrykoontz/.opam/cs3110-2023sp/lib/yojson/yojson.cmxa /Users/henrykoontz/.opam/cs3110-2023sp/lib/ocaml/unix.cmxa -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/ocaml -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/ocaml /Users/henrykoontz/.opam/cs3110-2023sp/lib/ANSITerminal/ANSITerminal.cmxa -I /Users/henrykoontz/.opam/cs3110-2023sp/lib/ANSITerminal src/api.cmxa /Users/henrykoontz/.opam/cs3110-2023sp/lib/stdlib-shims/stdlib_shims.cmxa /Users/henrykoontz/.opam/cs3110-2023sp/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/henrykoontz/.opam/cs3110-2023sp/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)

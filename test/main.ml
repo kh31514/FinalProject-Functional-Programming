@@ -29,7 +29,7 @@ let artist_test =
          \t2. Come Together - Remastered 2009\n\
          \t3. Let It Be - Remastered 2009\n\
          \t4. Yesterday - Remastered 2009\n\
-         \t5. Twist And Shout - Remastered 2009"
+         \t5. Twist And Shout - Remastered 2009\n"
         (Api.Artist.top_track_string beatles_top_track 1) );
   ]
 
@@ -41,14 +41,6 @@ let hotel =
   let track = Api.Track.track_of_json json in
   track
 
-let hotel_info =
-  "Hotel California - 2013 Remaster was produced by Eagles in 1976.\n\
-   It is not explicit, lasts 6 minutes and 31 seconds, and has a popularity \
-   ranking of 85.\n\
-   It is track number 1 in the album Hotel California (2013 Remaster).\n\
-   Want to listen now? Go to \
-   https://open.spotify.com/album/2widuo17g5CEC66IbzveRu"
-
 let track_test =
   [
     ( "Track name test" >:: fun _ ->
@@ -59,9 +51,7 @@ let track_test =
         (Api.Track.track_of_json
            (Yojson.Basic.from_file "test/test_data/hotel.json")) );
     ( "Track artist name test" >:: fun _ ->
-      assert_equal "Eagles" (Api.Track.get_track_artist hotel) )
-    (*("Track artist info test" >:: fun _ -> assert_equal hotel_info
-      (Api.Track.print_track_info hotel));*);
+      assert_equal "Eagles" (Api.Track.get_track_artist hotel) );
   ]
 
 (*******************************************************************************
