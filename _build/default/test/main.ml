@@ -1,7 +1,31 @@
 open OUnit2
 open Api
 open Yojson.Basic.Util
-
+(**Test Plan
+    For our testing we focussed on making the tests around the key funcitonality
+    that intesracts with the Json files that were given to us by the API. This 
+    is to ensure we are accurately able to pull information from the files 
+    and that the files contain all of the information that we require. We also 
+    Needed to ensure uniformity across the files we receive from the API so each
+    function tested is tested against multiple Json files. Black box testing was
+    used in order to create many of the tests. In order to do so we 
+    took multiple json files created by the spotify API and plugged them 
+    directly into the functions used in the src file, matching them against the
+    what the output should be according to the mli. 
+    Much of the functionality of this code exists in the bin/Main.ml file. This 
+    is an executable file and we are therefore unable to test what is in this 
+    file This file does, however mostly deal with the user interface portion of 
+    the code, and therefore was better suited to be tested mannually. This was 
+    done by running the program several times accross several inputs. This was 
+    also necessary for a few of the functions in the src file. The src and the
+    bin files were heavily interwoven, and some functions in the src file could
+    not be tested consistently by a test suite. There functions were therefore
+    also tested manually
+    We believe the test suite demonstrates the system is able to reliably parse 
+    information from json files given back from spotify API. As this is the main 
+    function of the program, to serve as a go-between for the used and the API. 
+    Users will accurately receive informaiton back from the API due to the 
+    functions that have been thuroughly tested in this suite*)
 exception UnknownSong of string
 
 (*******************************************************************************
@@ -132,8 +156,8 @@ let album_test =
       assert_equal "Second Hand News - 2004 Remaster"
         (Api.Album.track_num_to_name 1 rumors_list) );
     ( "Track number to name last number test 2" >:: fun _ ->
-      assert_equal "Dreams - Live 1977"
-        (Api.Album.track_num_to_name 15 rumors_list) );
+      assert_equal "Silver Springs - 2004 Remaster"
+        (Api.Album.track_num_to_name 12 rumors_list) );
     ( "Track number to name out of bounds test 2" >:: fun _ ->
       assert_equal "track number not found?"
         (Api.Album.track_num_to_name 17 rumors_list) );

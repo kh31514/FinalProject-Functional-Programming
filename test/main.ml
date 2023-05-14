@@ -156,8 +156,8 @@ let album_test =
       assert_equal "Second Hand News - 2004 Remaster"
         (Api.Album.track_num_to_name 1 rumors_list) );
     ( "Track number to name last number test 2" >:: fun _ ->
-      assert_equal "Dreams - Live 1977"
-        (Api.Album.track_num_to_name 15 rumors_list) );
+      assert_equal "Silver Springs - 2004 Remaster"
+        (Api.Album.track_num_to_name 12 rumors_list) );
     ( "Track number to name out of bounds test 2" >:: fun _ ->
       assert_equal "track number not found?"
         (Api.Album.track_num_to_name 17 rumors_list) );
