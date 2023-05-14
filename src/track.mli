@@ -12,8 +12,14 @@ type track
 (** The abstract type of values representing Spotify tracks. *)
 
 type abbrev_artist
+(** type abbrev_artist represents an abbreviated version of type artist from
+    Artist.ml. Unlike type artist, type abbrev_artist does not include the
+    following attributes: follower_count, genres, images, and popularity *)
 
 val abbrev_artist_of_json : Yojson.Basic.t -> abbrev_artist
+(** [abbrev_artist_of_json j] is the abbreviated artist that [j] represents.
+    Requires: [j] is a valid JSON abbreviated artist representation. *)
+
 val format_artists : abbrev_artist list -> string
 
 val track_of_json : Yojson.Basic.t -> track
@@ -33,7 +39,7 @@ val get_track_artist : track -> string
     return the string "a1, ..., an-1 and an."*)
 
 val print_track_info : track -> unit
-(** [print_track_info t] will print information about track t to the terminal.
+(** [print_track_info t] will print information about track [t] to the terminal.
     For example, if [t] represents the json of the track "Iris",
     [print_track_info t] will print the following: "Here's what I found: Iris
     was produced by The Goo Goo Dolls in 1998. It is not explicit, lasts 4

@@ -65,8 +65,6 @@ let image_of_json json =
     width = json |> member "width" |> to_int;
   }
 
-(* [abbrev_artist_of_json j] is the abbreviated artist that [j] represents.
-   Requires: [j] is a valid JSON abbreviated artist representation. *)
 let abbrev_artist_of_json json =
   {
     spotify_link =
