@@ -268,7 +268,9 @@ let album_test =
     ( "Abbrev track of json recovery test" >:: fun _ ->
       assert_equal 15 (Api.Album.get_album_track_len recovery_list) );
     ( "Abbrev track of json Rumours test" >:: fun _ ->
-      assert_equal 12 (Api.Album.get_album_track_len rumors_list) );
+      assert_equal 12
+        (Api.Album.get_album_track_len rumors_list)
+        ~printer:string_of_int );
     ( "Album long name test" >:: fun _ ->
       assert_equal "Watch The Throne (Deluxe)" (Api.Album.get_album_name wtt) );
     ( "Album of json wtt test" >:: fun _ ->
