@@ -1,0 +1,36 @@
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:1:Album of json test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:1:Album of json test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:1:Album of json test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:3:Track number to name 1 test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:3:Track number to name 1 test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:3:Track number to name 1 test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:5:Track number to name out of bounds test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:5:Track number to name out of bounds test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:5:Track number to name out of bounds test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:7:Track number to name negative test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:7:Track number to name negative test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:7:Track number to name negative test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:9:Album of json test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:9:Album of json test 2 is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:9:Album of json test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:11:Track number to name 1 test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:11:Track number to name 1 test 2 is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:11:Track number to name 1 test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:13:Track number to name out of bounds test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:13:Track number to name out of bounds test 2 is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:13:Track number to name out of bounds test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:15:Track number to name negative test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:15:Track number to name negative test 2 is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:15:Track number to name negative test 2.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:17:Artist of json test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:17:Artist of json test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:17:Artist of json test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:20:Track of json test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:20:Track of json test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:20:Track of json test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:22:Obscure name test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:22:Obscure name test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:22:Obscure name test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Start test test suite for Spoticaml:24:Track artist many name test.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: Test test suite for Spoticaml:24:Track artist many name test is successful.
+2023-05-14T01:07:26+00:00 MacBook-Air-4.local#02 I: End test test suite for Spoticaml:24:Track artist many name test.
