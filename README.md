@@ -1,5 +1,5 @@
 # SpotiCaml
-*_Final project for CS 3110 Data Structures and Functional Programming_*
+*_Spring 2023 final project for CS 3110 Data Structures and Functional Programming_*
 </br>
 </br>
 
